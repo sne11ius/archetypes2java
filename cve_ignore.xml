@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions
+	xmlns="https://www.owasp.org/index.php/OWASP_Dependency_Check_Suppression">
+	<suppress>
+		<notes><![CDATA[
+	   file name: javax.mail-1.5.5.jar
+	   ]]>Gibt
+			es wohl nicht (mehr?) wirklich.
+		</notes>
+		<sha1>ffcd34b5de820f35bcc9303649cf6ab2c65ad44e</sha1>
+		<cve>CVE-2007-6059</cve>
+	</suppress>
+	<suppress>
+		<notes><![CDATA[
+	   file name: vaadin-spring-1.0.0.jar
+	   ]]>Ist
+			für alte Vaadin-Versionen
+		</notes>
+		<sha1>f9e31f0390c0bf624c4c89e50f73401338d1dfc1</sha1>
+		<cve>CVE-2011-0509</cve>
+	</suppress>
+	<suppress>
+		<notes><![CDATA[
+	   file name: tomcat-embed-core-8.0.33.jar
+	   ]]>Betrifft
+			nur "... allows remote attackers to write to arbitrary files via a
+			NULL byte in a file name in a serialized instance"
+		</notes>
+		<sha1>4e7f547fbb2c364cb5e02a58790c5fb89e31efed</sha1>
+		<cve>CVE-2013-2185</cve>
+	</suppress>
+	<suppress>
+		<notes><![CDATA[
+	   file name: tomcat-embed-core-8.0.33.jar
+	   ]]>Für
+			alte Tomcat-Versionen
+		</notes>
+		<sha1>4e7f547fbb2c364cb5e02a58790c5fb89e31efed</sha1>
+		<cve>CVE-2007-5461</cve>
+	</suppress>
+	<suppress>
+		<notes><![CDATA[
+	   file name: tomcat-embed-core-8.0.33.jar
+	   ]]>Kann
+			nur bei manipulierten web.xml-Dateien auftreten und ist damit für
+			embedded nicht relevant.
+		</notes>
+		<sha1>4e7f547fbb2c364cb5e02a58790c5fb89e31efed</sha1>
+		<cve>CVE-2002-0493</cve>
+	</suppress>
+	<suppress>
+		<notes><![CDATA[
+	   file name: tomcat-embed-core-8.0.33.jar
+	   ]]>Nur
+			Fehler in einer Beispiel-Datei, die wir nicht verwenden
+		</notes>
+		<sha1>4e7f547fbb2c364cb5e02a58790c5fb89e31efed</sha1>
+		<cve>CVE-2009-2696</cve>
+	</suppress>
+	<suppress>
+		<notes><![CDATA[
+	   file name: atmosphere-runtime-2.2.7.vaadin1.jar
+	   ]]>Ist
+			für alte Vaadin-Versionen
+		</notes>
+		<sha1>9b3f579c62fde3a9b7808c7761086c0c45ac94dc</sha1>
+		<cpe>cpe:/a:vaadin:vaadin:2.2.7</cpe>
+	</suppress>
+	<suppress>
+		<notes><![CDATA[
+	   file name: vaadin-slf4j-jdk14-1.6.1.jar
+	   ]]>Ist
+			für alte Vaadin-Versionen
+		</notes>
+		<sha1>2268b4bb8226e01963357bc9a02a5d56c9992b8a</sha1>
+		<cve>CVE-2011-0509</cve>
+	</suppress>
+	<suppress>
+		<notes><![CDATA[
+	   file name: streamhtmlparser-jsilver-0.0.10.vaadin1.jar
+	   ]]>Ist
+			für alte Vaadin-Versionen
+		</notes>
+		<sha1>0f0c67779b52ddcdf0191d5309606db0353f5b7e</sha1>
+		<cve>CVE-2011-0509</cve>
+	</suppress>
+	<suppress>
+		<notes><![CDATA[
+	   file name: vaadin-cdi-1.0.3.jar
+	   ]]>Ist
+			für alte Vaadin-Versionen
+		</notes>
+		<sha1>066166b972a261bb644ed45a848785871fa63de7</sha1>
+		<cve>CVE-2011-0509</cve>
+	</suppress>
+	<suppress>
+		<notes><![CDATA[
+	   file name: vaadin-sass-compiler-0.9.13.jar
+	   ]]>Ist
+			für alte Vaadin-Versionen
+		</notes>
+		<sha1>663088831773c35e033ea1538b96d817ce7cef52</sha1>
+		<cve>CVE-2011-0509</cve>
+	</suppress>
+</suppressions>

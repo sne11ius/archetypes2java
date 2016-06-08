@@ -1,0 +1,9 @@
+*.class
+.classpath
+.project
+.springBeans
+**/.settings
+**/target
+**/VAADIN
+src/main/java/es/archetypes/archetypes2/gui/messages/Messages.java
+.factorypath

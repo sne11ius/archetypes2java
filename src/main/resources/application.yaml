@@ -1,0 +1,22 @@
+archetypes:
+  mavenRootDir: C:\Users\cornelius\Desktop\archetypes-temp
+  mavenRepos:
+    - https://repo1.maven.org/maven2/archetype-catalog.xml
+  mavenCommand: C:\Users\cornelius\bin\apache-maven-3.3.9\bin\mvn.cmd
+  
+  
+server:
+  port: 8080
+security:
+  user:
+    password: user
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost/archetypes2?useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
