@@ -7,11 +7,14 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+
+import es.archetyp.archetypes2.gui.archetypes.DefaultVisible;
 
 @Entity
 @Table(uniqueConstraints = {
@@ -66,7 +69,7 @@ public class Archetype {
 	@Column(nullable = true)
 	private String generateLog;
 
-	@ElementCollection
+	@ElementCollection(fetch = FetchType.EAGER)
 	@Column()
 	private Set<String> additionalProps;
 
@@ -74,18 +77,34 @@ public class Archetype {
 		return id;
 	}
 
+	@DefaultVisible
 	public String getGroupId() {
 		return groupId;
 	}
 
+	public void setGroupId(final String groupId) {
+		this.groupId = groupId;
+	}
+
+	@DefaultVisible
 	public String getArtifactId() {
 		return artifactId;
 	}
 
+	public void setArtifactId(final String artifactId) {
+		this.artifactId = artifactId;
+	}
+
+	@DefaultVisible
 	public String getVersion() {
 		return version;
 	}
 
+	public void setVersion(final String version) {
+		this.version = version;
+	}
+
+	@DefaultVisible
 	public Optional<String> getDescription() {
 		return Optional.ofNullable(description);
 	}
@@ -94,6 +113,7 @@ public class Archetype {
 		return repositoryUrl;
 	}
 
+	@DefaultVisible
 	public Optional<String> getJavaVersion() {
 		return Optional.ofNullable(javaVersion);
 	}
@@ -102,6 +122,7 @@ public class Archetype {
 		this.javaVersion = javaVersion.orElse(null);
 	}
 
+	@DefaultVisible
 	public Optional<String> getPackaging() {
 		return Optional.ofNullable(packaging);
 	}
@@ -110,6 +131,7 @@ public class Archetype {
 		this.packaging = packaging.orElse(null);
 	}
 
+	@DefaultVisible
 	public Optional<OffsetDateTime> getLastUpdated() {
 		return Optional.ofNullable(lastUpdated);
 	}

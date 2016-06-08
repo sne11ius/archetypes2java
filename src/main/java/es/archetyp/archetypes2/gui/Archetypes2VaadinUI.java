@@ -2,6 +2,7 @@ package es.archetyp.archetypes2.gui;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
+
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.VaadinRequest;
@@ -20,7 +21,7 @@ public class Archetypes2VaadinUI extends UI {
 
     @Override
     protected void init(final VaadinRequest request) {
-    	publisher.publishEvent(new NavigationEvent("login"));
+    	publisher.publishEvent(new NavigationEvent("list"));
     }
 
 }
