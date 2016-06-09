@@ -1,13 +1,12 @@
-package es.archetyp.archetypes2.archetype;
+package es.archetyp.archetypes2.backend.archetype.entity;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.Repository;
 
-public interface ArchetypeRepository extends Repository<Archetype, Long> {
+public interface Archetypes extends Repository<Archetype, Long> {
 
 	Archetype save(Archetype archetype);
 

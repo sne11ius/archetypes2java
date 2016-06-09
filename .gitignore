@@ -4,6 +4,7 @@
 .springBeans
 **/.settings
 **/target
-**/VAADIN
+**/VAADIN/widgetsets
+**/VAADIN/gwt-unitCache
 src/main/java/es/archetypes/archetypes2/gui/messages/Messages.java
 .factorypath

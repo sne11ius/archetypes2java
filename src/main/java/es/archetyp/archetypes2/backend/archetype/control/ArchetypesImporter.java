@@ -1,4 +1,4 @@
-package es.archetyp.archetypes2.archetype;
+package es.archetyp.archetypes2.backend.archetype.control;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -18,31 +18,37 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-
 import javax.annotation.PostConstruct;
-
 import org.apache.commons.io.FileUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 import org.zeroturnaround.exec.InvalidExitValueException;
 import org.zeroturnaround.exec.ProcessExecutor;
-
+import es.archetyp.archetypes2.backend.archetype.boundary.ArchetypesDatabaseUpdatedEvent;
+import es.archetyp.archetypes2.backend.archetype.entity.Archetype;
+import es.archetyp.archetypes2.backend.archetype.entity.Archetypes;
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 @Component
-public class ArchetypesImporter {
+class ArchetypesImporter {
 
 	@Autowired
 	private MavenConfig mavenConfig;
 
 	@Autowired
 	private PomParser pomParser;
+
+	@Autowired
+	private Archetypes archetypes;
+
+	@Autowired
+	private ApplicationEventPublisher publisher;
 
 	private File rootDir;
 
@@ -57,15 +63,12 @@ public class ArchetypesImporter {
 		}
 	}
 
-	@Autowired
-	private ArchetypeRepository archetypeRepository;
-
-	@Scheduled(fixedRate = (24 * 60 * 60 + 1) * 1000)
+	//@Scheduled(fixedRate = (24 * 60 * 60 + 1) * 1000)
 	public void importNewArchetypes() {
 		try {
 			final Set<Archetype> allArchetypes = loadFromAllCatalogs();
 			final Set<Archetype> newArchetypes = allArchetypes.parallelStream()
-					.filter(a -> !archetypeRepository
+					.filter(a -> !archetypes
 							.findByGroupIdAndArtifactIdAndVersion(a.getGroupId(), a.getArtifactId(), a.getVersion())
 							.isPresent())
 					.collect(Collectors.toSet());
@@ -75,13 +78,15 @@ public class ArchetypesImporter {
 				try {
 					LOG.debug("Importing " + current.getAndIncrement() + "/" + newArchetypes.size());
 					loadArchetypeContent(a);
-					archetypeRepository.save(a);
+					archetypes.save(a);
 				} catch (final Exception e) {
 					LOG.error("Could not import archetype " + a, e);
 				}
 			})).get();
 		} catch (final Exception e) {
 			LOG.error(e.getMessage(), e);
+		} finally {
+			publisher.publishEvent(new ArchetypesDatabaseUpdatedEvent());
 		}
 	}
 

@@ -1,22 +1,17 @@
 package es.archetyp.archetypes2.gui.archetypes;
 
-import java.beans.IntrospectionException;
-import java.beans.Introspector;
-import java.beans.PropertyDescriptor;
-
 import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.vaadin.addons.lazyquerycontainer.LazyQueryContainer;
-
+import com.vaadin.data.util.BeanItemContainer;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
 import com.vaadin.spring.annotation.SpringView;
 import com.vaadin.ui.CustomComponent;
 import com.vaadin.ui.Grid;
 import com.vaadin.ui.VerticalLayout;
-
-import es.archetyp.archetypes2.archetype.Archetype;
+import es.archetyp.archetypes2.backend.archetype.boundary.ArchetypeService;
+import es.archetyp.archetypes2.backend.archetype.entity.Archetype;
+import es.archetyp.archetypes2.gui.common.AutoGrid;
 import es.archetyp.archetypes2.gui.messages.Messages;
 import lombok.extern.log4j.Log4j2;
 
@@ -30,41 +25,26 @@ public class ArchetypesListView extends CustomComponent implements View {
 	private Messages messages;
 
 	@Autowired
-	private ArchetypesQueryFactory archetypesQueryFactory;
+	private ArchetypeService archetypeService;
 
 	@PostConstruct
 	public void init() {
 		final VerticalLayout layout = new VerticalLayout();
-		try {
-			final Grid grid = createGrid();
-			grid.setSizeFull();
-			layout.addComponent(grid);
-			layout.setSizeFull();
-		} catch (final IntrospectionException e) {
-			LOG.error("Cannot grid", e);
-		}
+		final Grid grid = createGrid();
+		grid.setSizeFull();
+		layout.addComponent(grid);
+		layout.setSizeFull();
 		setCompositionRoot(layout);
 		setSizeFull();
 	}
 
-	private Grid createGrid() throws IntrospectionException {
-		final Grid grid = new Grid();
-		final LazyQueryContainer items = new LazyQueryContainer(archetypesQueryFactory, "id", 100, false);
-		for (final PropertyDescriptor desc : Introspector.getBeanInfo(Archetype.class).getPropertyDescriptors()) {
-			if (desc.getReadMethod() != null && desc.getWriteMethod() != null) {
-				if (desc.getReadMethod().isAnnotationPresent(DefaultVisible.class)) {
-					final Class<?> clazz = desc.getPropertyType();
-					items.addContainerProperty(desc.getName(), clazz, null);
-				}
-			}
-		}
-		grid.setContainerDataSource(items);
-		return grid;
+	private Grid createGrid() {
+		return new AutoGrid<Archetype>(Archetype.class, new BeanItemContainer<Archetype>(Archetype.class, archetypeService.getNewest()));
 	}
 
 	@Override
 	public void enter(final ViewChangeEvent event) {
-
+		// empty
 	}
 
 }
