@@ -26,6 +26,7 @@ import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.zeroturnaround.exec.InvalidExitValueException;
 import org.zeroturnaround.exec.ProcessExecutor;
@@ -63,7 +64,7 @@ class ArchetypesImporter {
 		}
 	}
 
-	//@Scheduled(fixedRate = (24 * 60 * 60 + 1) * 1000)
+	@Scheduled(fixedRate = (24 * 60 * 60 + 1) * 1000)
 	public void importNewArchetypes() {
 		try {
 			final Set<Archetype> allArchetypes = loadFromAllCatalogs();
@@ -189,7 +190,7 @@ class ArchetypesImporter {
 
 	@SuppressWarnings("unchecked")
 	private Set<Archetype> loadFromAllCatalogs() throws DocumentException {
-		final Set<Archetype> archetypes = new HashSet<>();
+		final Set<Archetype> loadedArchetypes = new HashSet<>();
 		final AtomicInteger countTotal = new AtomicInteger();
 		for (final String repoUrl : mavenConfig.getMavenRepos()) {
 			final SAXReader reader = new SAXReader();
@@ -205,12 +206,12 @@ class ArchetypesImporter {
 				final String version = archetypeNode.selectSingleNode("version").getText();
 				final Node descriptionNode = archetypeNode.selectSingleNode("description");
 				final Optional<String> description = descriptionNode != null ? Optional.of(descriptionNode.getText()) : Optional.empty();
-				archetypes.add(new Archetype(groupId, artifactId, version, description, repoUrl));
+				loadedArchetypes.add(new Archetype(groupId, artifactId, version, description, repoUrl));
 				countTotal.incrementAndGet();
 			}
 		}
 		LOG.debug("Total archetypes: " + countTotal.get());
-		return archetypes;
+		return loadedArchetypes;
 	}
 
 }
