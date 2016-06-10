@@ -6,5 +6,5 @@
 **/target
 **/VAADIN/widgetsets
 **/VAADIN/gwt-unitCache
-src/main/java/es/archetypes/archetypes2/gui/messages/Messages.java
+src/main/java/es/archetyp/archetypes2/gui/messages/Messages.java
 .factorypath
