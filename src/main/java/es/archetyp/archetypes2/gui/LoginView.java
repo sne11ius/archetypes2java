@@ -1,7 +1,7 @@
 package es.archetyp.archetypes2.gui;
 
 import javax.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import com.ejt.vaadin.loginform.DefaultVerticalLoginForm;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
@@ -19,9 +19,6 @@ public class LoginView extends CustomComponent implements View {
 
 	private static final long serialVersionUID = 1L;
 
-	@Autowired
-	private Messages messages;
-
     @PostConstruct
     public void init() {
     	final DefaultVerticalLoginForm loginForm = createLoginForm();
@@ -38,15 +35,15 @@ public class LoginView extends CustomComponent implements View {
 			private static final long serialVersionUID = 1L;
 			@Override
     		protected String getUserNameFieldCaption() {
-				return messages.loginUsername();
+				return Messages.loginUsername();
     		}
     		@Override
     		protected String getPasswordFieldCaption() {
-    			return messages.loginPassword();
+    			return Messages.loginPassword();
     		}
     		@Override
     		protected String getLoginButtonCaption() {
-    			return messages.loginButton();
+    			return Messages.loginButton();
     		}
     	};
     	loginForm.addLoginListener(event -> {

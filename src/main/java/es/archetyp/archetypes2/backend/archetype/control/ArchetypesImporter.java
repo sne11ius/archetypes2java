@@ -18,7 +18,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
 import javax.annotation.PostConstruct;
+
 import org.apache.commons.io.FileUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -30,6 +32,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.zeroturnaround.exec.InvalidExitValueException;
 import org.zeroturnaround.exec.ProcessExecutor;
+
 import es.archetyp.archetypes2.backend.archetype.boundary.ArchetypesDatabaseUpdatedEvent;
 import es.archetyp.archetypes2.backend.archetype.entity.Archetype;
 import es.archetyp.archetypes2.backend.archetype.entity.Archetypes;
