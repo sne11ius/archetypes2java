@@ -1,4 +1,4 @@
-package es.archetyp.archetypes2.gui.archetypes;
+package es.archetyp.archetypes2.gui.archetypes.detail;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;

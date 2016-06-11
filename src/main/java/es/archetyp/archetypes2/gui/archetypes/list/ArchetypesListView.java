@@ -1,4 +1,4 @@
-package es.archetyp.archetypes2.gui.archetypes;
+package es.archetyp.archetypes2.gui.archetypes.list;
 
 import java.util.Optional;
 

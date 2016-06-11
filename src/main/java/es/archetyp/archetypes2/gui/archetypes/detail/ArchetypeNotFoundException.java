@@ -1,4 +1,4 @@
-package es.archetyp.archetypes2.gui.archetypes;
+package es.archetyp.archetypes2.gui.archetypes.detail;
 
 public class ArchetypeNotFoundException extends RuntimeException {
 
