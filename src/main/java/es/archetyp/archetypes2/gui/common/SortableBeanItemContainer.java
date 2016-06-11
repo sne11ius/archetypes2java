@@ -1,8 +1,10 @@
 package es.archetyp.archetypes2.gui.common;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import com.vaadin.data.util.BeanItemContainer;
 import com.vaadin.data.util.DefaultItemSorter;
@@ -29,6 +31,14 @@ public class SortableBeanItemContainer<T extends AbstractBaseEntity> extends Bea
 				return super.compare(o1, o2);
 			}
 		}));
+	}
+
+	public List<T> getAllItems() {
+		return getAllItemIds()
+			.stream()
+			.map(this::getItem)
+			.map(i -> i.getBean())
+			.collect(Collectors.toList());
 	}
 
 	@Override

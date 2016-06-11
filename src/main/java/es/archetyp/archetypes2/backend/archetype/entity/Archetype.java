@@ -3,6 +3,7 @@ package es.archetyp.archetypes2.backend.archetype.entity;
 import java.time.OffsetDateTime;
 import java.util.Optional;
 import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -10,8 +11,11 @@ import javax.persistence.FetchType;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+
 import es.archetyp.archetypes2.backend.entity.AbstractBaseEntity;
 import es.archetyp.archetypes2.backend.entity.DefaultVisible;
+import es.archetyp.archetypes2.backend.entity.FilterType;
+import es.archetyp.archetypes2.backend.entity.FilterType.Type;
 
 @Entity
 @Table(uniqueConstraints = {
@@ -31,18 +35,22 @@ public class Archetype extends AbstractBaseEntity {
 	}
 
 	@DefaultVisible(order = 0)
+	@FilterType(type = Type.TEXT)
 	@Column(nullable = false)
 	private String groupId;
 
 	@DefaultVisible(order = 1)
+	@FilterType(type = Type.TEXT)
 	@Column(nullable = false)
 	private String artifactId;
 
 	@DefaultVisible(order = 2)
+	@FilterType(type = Type.TEXT)
 	@Column(nullable = false)
 	private String version;
 
 	@DefaultVisible(order = 3)
+	@FilterType(type = Type.TEXT)
 	@Lob
 	@Column(nullable = true)
 	private String description;
@@ -51,10 +59,12 @@ public class Archetype extends AbstractBaseEntity {
 	private String repositoryUrl;
 
 	@DefaultVisible(order = 4)
+	@FilterType(type = Type.COMBOBOX)
 	@Column(nullable = true)
 	private String javaVersion;
 
 	@DefaultVisible(order = 5)
+	@FilterType(type = Type.COMBOBOX)
 	@Column(nullable = true)
 	private String packaging;
 
