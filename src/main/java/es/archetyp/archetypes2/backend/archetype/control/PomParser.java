@@ -1,4 +1,4 @@
-package es.archetyp.archetypes2.archetype;
+package es.archetyp.archetypes2.backend.archetype.control;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -15,9 +15,7 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-
 import javax.xml.parsers.ParserConfigurationException;
-
 import org.apache.commons.lang3.StringUtils;
 import org.dom4j.Attribute;
 import org.dom4j.Document;
@@ -30,12 +28,12 @@ import org.dom4j.io.SAXReader;
 import org.dom4j.tree.DefaultElement;
 import org.springframework.stereotype.Component;
 import org.xml.sax.SAXException;
-
+import es.archetyp.archetypes2.backend.archetype.entity.Archetype;
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 @Component
-public class PomParser {
+class PomParser {
 
 	public Pom parse(final File baseDir, final Archetype archetype) {
 		final File pomFile = new File(new File(baseDir, "example-app"), "pom.xml");
@@ -55,8 +53,8 @@ public class PomParser {
 		public PomImpl(final File pomFile, final Archetype archetype) throws ParserConfigurationException, SAXException, IOException, DocumentException {
 			this.archetype = archetype;
 			final SAXReader reader = new SAXReader();
-	        this.document = reader.read(pomFile);
-	        this.document.accept(new VisitorSupport() {
+	        document = reader.read(pomFile);
+	        document.accept(new VisitorSupport() {
 	        	@Override
 				public void visit(final Document document) {
 	        	    ((DefaultElement) document.getRootElement())

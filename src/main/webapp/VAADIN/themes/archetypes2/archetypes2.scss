@@ -1,0 +1,6 @@
+@import "../valo/valo.scss";
+@mixin archetypes2 {
+  @include valo;
+  /* Your custom styles go here... */
+}
+@include archetypes2;

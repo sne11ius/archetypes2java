@@ -1,4 +1,4 @@
-package es.archetyp.archetypes2.archetype;
+package es.archetyp.archetypes2.backend.archetype.entity;
 
 import java.time.OffsetDateTime;
 import java.util.Optional;
@@ -7,17 +7,21 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.FetchType;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+
+import es.archetyp.archetypes2.backend.entity.AbstractBaseEntity;
+import es.archetyp.archetypes2.backend.entity.DefaultVisible;
+import es.archetyp.archetypes2.backend.entity.FilterType;
+import es.archetyp.archetypes2.backend.entity.FilterType.Type;
 
 @Entity
 @Table(uniqueConstraints = {
     @UniqueConstraint(columnNames = {"groupId", "artifactId", "version"})
 })
-public class Archetype {
+public class Archetype extends AbstractBaseEntity {
 
 	public Archetype() {
 	}
@@ -27,22 +31,26 @@ public class Archetype {
 		this.artifactId = artifactId;
 		this.version = version;
 		this.description = description.orElse(null);
-		this.repositoryUrl = repository;
+		repositoryUrl = repository;
 	}
 
-	@Id
-    @GeneratedValue
-    private Long id;
-
+	@DefaultVisible(order = 0)
+	@FilterType(type = Type.TEXT)
 	@Column(nullable = false)
 	private String groupId;
 
+	@DefaultVisible(order = 1)
+	@FilterType(type = Type.TEXT)
 	@Column(nullable = false)
 	private String artifactId;
 
+	@DefaultVisible(order = 2)
+	@FilterType(type = Type.TEXT)
 	@Column(nullable = false)
 	private String version;
 
+	@DefaultVisible(order = 3)
+	@FilterType(type = Type.TEXT)
 	@Lob
 	@Column(nullable = true)
 	private String description;
@@ -50,9 +58,13 @@ public class Archetype {
 	@Column(nullable = false)
 	private String repositoryUrl;
 
+	@DefaultVisible(order = 4)
+	@FilterType(type = Type.COMBOBOX)
 	@Column(nullable = true)
 	private String javaVersion;
 
+	@DefaultVisible(order = 5)
+	@FilterType(type = Type.COMBOBOX)
 	@Column(nullable = true)
 	private String packaging;
 
@@ -66,32 +78,48 @@ public class Archetype {
 	@Column(nullable = true)
 	private String generateLog;
 
-	@ElementCollection
+	@ElementCollection(fetch = FetchType.EAGER)
 	@Column()
 	private Set<String> additionalProps;
 
-	public Long getId() {
-		return id;
-	}
-
 	public String getGroupId() {
 		return groupId;
+	}
+
+	public void setGroupId(final String groupId) {
+		this.groupId = groupId;
 	}
 
 	public String getArtifactId() {
 		return artifactId;
 	}
 
+	public void setArtifactId(final String artifactId) {
+		this.artifactId = artifactId;
+	}
+
 	public String getVersion() {
 		return version;
+	}
+
+	public void setVersion(final String version) {
+		this.version = version;
 	}
 
 	public Optional<String> getDescription() {
 		return Optional.ofNullable(description);
 	}
 
+	public void setDescription(final Optional<String> description) {
+		this.description = description.orElse(null);
+	}
+
 	public String getRepositoryUrl() {
 		return repositoryUrl;
+	}
+
+	public void setRepositoryUrl(final String repositoryUrl) {
+		this.repositoryUrl = repositoryUrl;
 	}
 
 	public Optional<String> getJavaVersion() {
@@ -190,7 +218,7 @@ public class Archetype {
 
 	@Override
 	public String toString() {
-		return "Archetype [id=" + id + ", groupId=" + groupId + ", artifactId=" + artifactId + ", version=" + version + ", description=" + description + ", repository=" + repositoryUrl + ", javaVersion=" + javaVersion + ", packaging=" + packaging + ", lastUpdated=" + lastUpdated + ", localDir=" + localDir + ", generateLog=" + generateLog + ", additionalProps=" + additionalProps + "]";
+		return "Archetype [groupId=" + groupId + ", artifactId=" + artifactId + ", version=" + version + ", description=" + description + ", repository=" + repositoryUrl + ", javaVersion=" + javaVersion + ", packaging=" + packaging + ", lastUpdated=" + lastUpdated + ", localDir=" + localDir + ", generateLog=" + generateLog + ", additionalProps=" + additionalProps + "]";
 	}
 
 }

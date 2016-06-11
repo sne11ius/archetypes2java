@@ -1,8 +1,8 @@
-package es.archetyp.archetypes2.archetype;
+package es.archetyp.archetypes2.backend.archetype.control;
 
 import java.util.List;
 
-public class ArchetypeGenerateResult {
+class ArchetypeGenerateResult {
 
 	private final int exitValue;
 	private final String output;
