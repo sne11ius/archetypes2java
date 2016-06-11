@@ -1,4 +1,6 @@
-package es.archetyp.archetypes2.archetype;
+package es.archetyp.archetypes2.backend.archetype.control;
+
+import es.archetyp.archetypes2.backend.archetype.entity.Archetype;
 
 public class ArchetypeAlreadyImportedException extends RuntimeException {
 

@@ -1,9 +1,9 @@
-package es.archetyp.archetypes2.archetype;
+package es.archetyp.archetypes2.backend.archetype.control;
 
 import java.time.OffsetDateTime;
 import java.util.Optional;
 
-public interface Pom {
+interface Pom {
 
 	Optional<String> getJavaVersion();
 

@@ -1,8 +1,7 @@
-package es.archetyp.archetypes2.archetype;
+package es.archetyp.archetypes2.backend.archetype.control;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
@@ -10,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableConfigurationProperties
 @ConfigurationProperties(prefix = "archetypes")
-public class MavenConfig {
+class MavenConfig {
 
 	private List<String> mavenRepos = new ArrayList<>();
 

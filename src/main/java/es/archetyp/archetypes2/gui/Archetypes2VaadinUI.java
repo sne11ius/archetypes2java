@@ -8,7 +8,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.UI;
 
-@Theme("valo")
+@Theme("archetypes2")
 @Widgetset("Archetypes2Widgetset")
 @SpringUI
 public class Archetypes2VaadinUI extends UI {
@@ -20,7 +20,7 @@ public class Archetypes2VaadinUI extends UI {
 
     @Override
     protected void init(final VaadinRequest request) {
-    	publisher.publishEvent(new NavigationEvent("login"));
+    	publisher.publishEvent(new NavigationEvent("list"));
     }
 
 }
