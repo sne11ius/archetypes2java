@@ -32,6 +32,12 @@ public class DetailView extends CustomComponent implements View {
 	private ArchetypeCommandPanel commandPanel;
 
 	@Autowired
+	private ArchetypeExampleFileContentPanel fileContentPanel;
+
+	@Autowired
+	private AchetypeSourceTree achetypeSourceTree;
+
+	@Autowired
 	private ApplicationEventPublisher publisher;
 
     @Override
@@ -40,16 +46,21 @@ public class DetailView extends CustomComponent implements View {
         vlayout.setSizeFull();
         vlayout.setMargin(true);
         vlayout.setSpacing(true);
-        final HorizontalLayout hlayout = new HorizontalLayout();
-        vlayout.addComponent(hlayout);
+        final HorizontalLayout hlayout1 = new HorizontalLayout();
+        vlayout.addComponent(hlayout1);
         final String[] args = event.getParameters().split("/");
         final Archetype archetype = archetypes.findByGroupIdAndArtifactIdAndVersion(args[0], args[1], args[2]).orElseThrow(ArchetypeNotFoundException::new);
         publisher.publishEvent(new ArchetypeDetailChangedEvent(archetype));
-        hlayout.addComponent(detailsPanel);
-        hlayout.addComponent(commandPanel);
-        hlayout.setExpandRatio(commandPanel, 1.0F);
-        hlayout.setSpacing(true);
-        hlayout.setWidth(100, Unit.PERCENTAGE);
+        hlayout1.addComponent(detailsPanel);
+        hlayout1.addComponent(commandPanel);
+        hlayout1.setExpandRatio(commandPanel, 1.0F);
+        hlayout1.setSpacing(true);
+        hlayout1.setWidth(100, Unit.PERCENTAGE);
+        final HorizontalLayout hlayout2 = new HorizontalLayout();
+        vlayout.addComponent(hlayout2);
+        hlayout2.addComponent(achetypeSourceTree);
+        hlayout2.addComponent(fileContentPanel);
+        hlayout2.setSpacing(true);
         setCompositionRoot(vlayout);
     }
 
