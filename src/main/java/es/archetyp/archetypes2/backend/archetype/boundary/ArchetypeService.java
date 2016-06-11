@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.maven.artifact.versioning.ComparableVersion;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +57,17 @@ public class ArchetypeService {
 				});
 				return l.get(0);
 			}).collect(Collectors.toList());
+	}
+
+	public String createGenerateCommand(final Archetype archetype) {
+		return "mvn archetype:generate -DgroupId=com.example.app -DartifactId=example-app -Dversion=1.0-SNAPSHOT -Dpackage=com.example.app -DinteractiveMode=false" +
+					" -DarchetypeGroupId=" + archetype.getGroupId() +
+					" -DarchetypeArtifactId=" + archetype.getArtifactId() +
+					" -DarchetypeVersion=" + archetype.getVersion() +
+					archetype.getAdditionalProps()
+						.stream()
+						.map(p -> " " + p + "=My" + StringUtils.capitalize(p))
+						.collect(Collectors.joining());
 	}
 
 }

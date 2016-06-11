@@ -29,7 +29,7 @@ public class NavigationService implements Serializable {
     private UI ui;
 
     @PostConstruct
-    public void initialize() {
+    public void init() {
         if (ui.getNavigator() == null) {
             final Navigator navigator = new Navigator(ui, ui);
             navigator.addProvider(viewProvider);

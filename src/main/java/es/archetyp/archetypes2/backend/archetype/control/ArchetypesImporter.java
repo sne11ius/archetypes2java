@@ -72,10 +72,10 @@ class ArchetypesImporter {
 		try {
 			final Set<Archetype> allArchetypes = loadFromAllCatalogs();
 			final Set<Archetype> newArchetypes = allArchetypes.parallelStream()
-					.filter(a -> !archetypes
-							.findByGroupIdAndArtifactIdAndVersion(a.getGroupId(), a.getArtifactId(), a.getVersion())
-							.isPresent())
-					.collect(Collectors.toSet());
+				.filter(a -> !archetypes
+					.findByGroupIdAndArtifactIdAndVersion(a.getGroupId(), a.getArtifactId(), a.getVersion())
+					.isPresent())
+				.collect(Collectors.toSet());
 			LOG.debug("Importing " + newArchetypes.size() + " new Archetypes.");
 			final AtomicInteger current = new AtomicInteger(1);
 			new ForkJoinPool(4).submit(() -> newArchetypes.stream().parallel().forEach(a -> {
@@ -149,7 +149,8 @@ class ArchetypesImporter {
 	}
 
 	private List<String> makeCommand(final Archetype archetype, final String groupId, final String artifactId, final List<String> additionalProps) {
-		final List<String> propsList = additionalProps.stream()
+		final List<String> propsList = additionalProps
+			.stream()
 			.map(p -> "-D" + p + "=Example" + Arrays.asList(p.split("-"))
 			.stream()
 			.map(s -> s.substring(0, 1).toUpperCase(Locale.ENGLISH) + s.substring(1)))
@@ -191,30 +192,40 @@ class ArchetypesImporter {
 		));
 	}
 
-	@SuppressWarnings("unchecked")
 	private Set<Archetype> loadFromAllCatalogs() throws DocumentException {
 		final Set<Archetype> loadedArchetypes = new HashSet<>();
 		final AtomicInteger countTotal = new AtomicInteger();
 		for (final String repoUrl : mavenConfig.getMavenRepos()) {
-			final SAXReader reader = new SAXReader();
-			LOG.debug("Loading catalog from " + repoUrl + "...");
-	        final Document document = reader.read(repoUrl);
-	        LOG.debug("... loading catalog done.");
-	        LOG.debug("Selecting archetype nodes...");
-			final List<Node> archetypeNodes = document.selectNodes("//archetype");
-			LOG.debug("... archetype node select done.");
-			for (final Node archetypeNode : archetypeNodes) {
-				final String groupId = archetypeNode.selectSingleNode("groupId").getText();
-				final String artifactId = archetypeNode.selectSingleNode("artifactId").getText();
-				final String version = archetypeNode.selectSingleNode("version").getText();
-				final Node descriptionNode = archetypeNode.selectSingleNode("description");
-				final Optional<String> description = descriptionNode != null ? Optional.of(descriptionNode.getText()) : Optional.empty();
-				loadedArchetypes.add(new Archetype(groupId, artifactId, version, description, repoUrl));
-				countTotal.incrementAndGet();
-			}
+			loadAllArchetypes(loadedArchetypes, countTotal, repoUrl);
 		}
 		LOG.debug("Total archetypes: " + countTotal.get());
 		return loadedArchetypes;
+	}
+
+	private void loadAllArchetypes(final Set<Archetype> loadedArchetypes, final AtomicInteger countTotal, final String repoUrl) throws DocumentException {
+		final SAXReader reader = new SAXReader();
+		LOG.debug("Loading catalog from " + repoUrl + "...");
+		final Document document = reader.read(repoUrl);
+		LOG.debug("... loading catalog done.");
+		LOG.debug("Selecting archetype nodes...");
+		@SuppressWarnings("unchecked")
+		final List<Node> archetypeNodes = document.selectNodes("//archetype");
+		LOG.debug("... archetype node select done.");
+		archetypeNodes
+			.parallelStream()
+			.forEach(n -> {
+				loadedArchetypes.add(readArchetype(n, repoUrl));
+				countTotal.incrementAndGet();
+			});
+	}
+
+	private Archetype readArchetype(final Node archetypeNode, final String repositoryUrl) {
+		final String groupId = archetypeNode.selectSingleNode("groupId").getText();
+		final String artifactId = archetypeNode.selectSingleNode("artifactId").getText();
+		final String version = archetypeNode.selectSingleNode("version").getText();
+		final Node descriptionNode = archetypeNode.selectSingleNode("description");
+		final Optional<String> description = descriptionNode != null ? Optional.of(descriptionNode.getText()) : Optional.empty();
+		return new Archetype(groupId, artifactId, version, description, repositoryUrl);
 	}
 
 }
