@@ -42,15 +42,23 @@ public class DetailView extends CustomComponent implements View {
 
     @Override
     public void enter(final ViewChangeEvent event) {
-        final VerticalLayout vlayout = new VerticalLayout();
+    	publishArchetypeDetailChangeEvent(event);
+        initLayout();
+    }
+
+	private void publishArchetypeDetailChangeEvent(final ViewChangeEvent event) {
+		final String[] args = event.getParameters().split("/");
+    	final Archetype archetype = archetypes.findByGroupIdAndArtifactIdAndVersion(args[0], args[1], args[2]).orElseThrow(ArchetypeNotFoundException::new);
+    	publisher.publishEvent(new ArchetypeDetailChangedEvent(archetype));
+	}
+
+	private void initLayout() {
+		final VerticalLayout vlayout = new VerticalLayout();
         vlayout.setSizeFull();
         vlayout.setMargin(true);
         vlayout.setSpacing(true);
         final HorizontalLayout hlayout1 = new HorizontalLayout();
         vlayout.addComponent(hlayout1);
-        final String[] args = event.getParameters().split("/");
-        final Archetype archetype = archetypes.findByGroupIdAndArtifactIdAndVersion(args[0], args[1], args[2]).orElseThrow(ArchetypeNotFoundException::new);
-        publisher.publishEvent(new ArchetypeDetailChangedEvent(archetype));
         hlayout1.addComponent(detailsPanel);
         hlayout1.addComponent(commandPanel);
         hlayout1.setExpandRatio(commandPanel, 1.0F);
@@ -62,6 +70,6 @@ public class DetailView extends CustomComponent implements View {
         hlayout2.addComponent(fileContentPanel);
         hlayout2.setSpacing(true);
         setCompositionRoot(vlayout);
-    }
+	}
 
 }
