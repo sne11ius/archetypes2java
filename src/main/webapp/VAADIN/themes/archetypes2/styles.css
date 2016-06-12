@@ -1813,16 +1813,16 @@ div.v-layout.v-horizontal.v-widget {
 }
 
 .v-app, .v-app-loading {
-	font: 300 16px/1.55 "Open Sans", sans-serif;
+	font: 300 16px/1.55 "Source Sans Pro", sans-serif;
 	color: #464646;
-	background-color: #fafafa;
+	background-color: #fff;
 	cursor: default;
 }
 
 .v-app-loading {
 	width: 100%;
 	height: 100%;
-	background: #fafafa;
+	background: #fff;
 }
 
 .v-app-loading:before {
@@ -1837,7 +1837,7 @@ div.v-layout.v-horizontal.v-widget {
 	margin-top: -24px;
 	margin-left: -24px;
 	background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50%;
-	border-radius: 4px;
+	border-radius: 0px;
 }
 
 .v-loading-indicator {
@@ -1898,7 +1898,7 @@ div.v-layout.v-horizontal.v-widget {
 	height: 28px;
 	padding: 9px;
 	background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50%;
-	border-radius: 4px;
+	border-radius: 0px;
 	top: 9px;
 	right: 9px;
 	left: auto;
@@ -1925,7 +1925,6 @@ img.v-icon {
 	font-size: 14px;
 	font-weight: 400;
 	padding-bottom: 0.3em;
-	padding-left: 1px;
 }
 
 .v-caption-on-left .v-caption, .v-caption-on-right .v-caption {
@@ -1963,18 +1962,16 @@ select {
 	line-height: inherit;
 	padding: 5px;
 	margin: 0;
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	color: #464646;
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	color: #434343;
 }
 
 select:focus {
 	outline: none;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 button {
@@ -1986,7 +1983,7 @@ button {
 a {
 	cursor: pointer;
 	color: #197de1;
-	text-decoration: underline;
+	text-decoration: none;
 	font-weight: inherit;
 	-webkit-transition: color 140ms;
 	-moz-transition: color 140ms;
@@ -2007,11 +2004,11 @@ a.v-disabled {
 }
 
 .v-drag-element {
-	background: #fafafa;
-	color: #464646;
+	background: #fff;
+	color: #474747;
 	-webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
+	border-radius: 0px;
 	overflow: hidden;
 	opacity: 0.5;
 	filter: alpha(opacity=50) ;
@@ -2067,15 +2064,15 @@ a.v-disabled {
 .v-contextmenu {
 	padding: 4px 4px;
 	border-radius: 4px;
-	background-color: white;
+	background-color: #fff;
 	color: #474747;
-	-webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.09098);
-	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.09098);
+	-webkit-box-shadow: 0 0 0 2px #000;
+	box-shadow: 0 0 0 2px #000;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-	padding: 4px 4px;
+	padding: 6px 0;
 }
 
 .v-contextmenu[class*="animate-in"] {
@@ -2126,9 +2123,7 @@ a.v-disabled {
 }
 
 .v-contextmenu .gwt-MenuItem-selected {
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	color: #ecf2f8;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
 }
@@ -2159,9 +2154,9 @@ a.v-disabled {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	border: 2px solid rgba(25, 125, 225, 0.2);
-	border-top-color: #197de1;
-	border-right-color: #197de1;
+	border: 2px solid rgba(0, 114, 198, 0.2);
+	border-top-color: #0072C6;
+	border-right-color: #0072C6;
 	border-radius: 100%;
 	-webkit-animation: v-rotate-360 500ms infinite linear;
 	-moz-animation: v-rotate-360 500ms infinite linear;
@@ -2173,7 +2168,7 @@ a.v-disabled {
 
 .v-ie8 .v-reconnect-dialog .spinner, .v-ie9 .v-reconnect-dialog .spinner {
 	border: none;
-	border-radius: 4px;
+	border-radius: 0px;
 	background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50% 50%;
 	background-size: 80%;
 }
@@ -2227,12 +2222,12 @@ a.v-disabled {
 }
 
 .v-verticallayout-well, .v-horizontallayout-well {
-	background: #f5f5f5;
-	color: #454545;
-	-webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset 0 2px 3px rgba(0, 0, 0, 0.05);
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
+	background: #e9e9e9;
+	color: #414141;
+	-webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset false;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset false;
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
 }
 
 .v-verticallayout-well  > div > [class*="-caption"], .v-horizontallayout-well  > div > [class*="-caption"] {
@@ -2260,10 +2255,10 @@ a.v-disabled {
 .v-verticallayout-card, .v-horizontallayout-card {
 	background: white;
 	color: #474747;
-	border-radius: 4px;
-	border: 1px solid #d5d5d5;
-	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-radius: 0px;
+	border: 2px solid #c9c9c9;
+	
+	
 }
 
 .v-verticallayout-card  > .v-margin-top, .v-horizontallayout-card  > .v-margin-top {
@@ -2303,21 +2298,16 @@ a.v-disabled {
 	-webkit-touch-callout: none;
 	cursor: pointer;
 	height: 37px;
-	padding: 0 16px;
-	color: #191919;
+	padding: 0 15px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 }
 
 .v-button:before {
@@ -2374,43 +2364,38 @@ a.v-disabled {
 
 .v-button:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-button:hover:after {
-	background-color: rgba(186, 186, 186, 0.1);
+	background-color: rgba(174, 174, 174, 0.1);
 }
 
 .v-button:focus:after {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-button:active:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 .v-button-primary {
 	height: 37px;
-	padding: 0 16px;
+	padding: 0 15px;
 	color: #ecf2f8;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #1362b1;
-	border-top-color: #156ab3;
-	border-bottom-color: #1156a8;
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
-	-webkit-box-shadow: inset 0 1px 0 #4d98e6, inset 0 -1px 0 #166bca, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 #4d98e6, inset 0 -1px 0 #166bca, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+	border-radius: 0px;
+	border: 0 solid #11579d;
+	background: #197de1;
+	
+	
 	padding: 0 19px;
 	font-weight: bold;
 	min-width: 81px;
@@ -2418,10 +2403,10 @@ a.v-disabled {
 
 .v-button-primary:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-button-primary:hover:after {
@@ -2430,8 +2415,8 @@ a.v-disabled {
 
 .v-button-primary:focus:after {
 	border: inherit;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-button-primary:active:after {
@@ -2444,29 +2429,24 @@ a.v-disabled {
 
 .v-button-friendly {
 	height: 37px;
-	padding: 0 16px;
+	padding: 0 15px;
 	color: #eaf4e9;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #227719;
-	border-top-color: #257d1a;
-	border-bottom-color: #1e6b15;
-	background-color: #2c9720;
-	background-image: -webkit-linear-gradient(top, #2f9f22 2%, #26881b 98%);
-	background-image: linear-gradient(to bottom,#2f9f22 2%, #26881b 98%);
-	-webkit-box-shadow: inset 0 1px 0 #46b33a, inset 0 -1px 0 #26811b, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 #46b33a, inset 0 -1px 0 #26811b, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+	border-radius: 0px;
+	border: 0 solid #1e6916;
+	background: #2c9720;
+	
+	
 }
 
 .v-button-friendly:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-button-friendly:hover:after {
@@ -2475,8 +2455,8 @@ a.v-disabled {
 
 .v-button-friendly:focus:after {
 	border: inherit;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-button-friendly:active:after {
@@ -2485,29 +2465,24 @@ a.v-disabled {
 
 .v-button-danger {
 	height: 37px;
-	padding: 0 16px;
+	padding: 0 15px;
 	color: #f9f0ef;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #bb382e;
-	border-top-color: #bc3c31;
-	border-bottom-color: #b13028;
-	background-color: #ed473b;
-	background-image: -webkit-linear-gradient(top, #ee4c3f 2%, #e13e33 98%);
-	background-image: linear-gradient(to bottom,#ee4c3f 2%, #e13e33 98%);
-	-webkit-box-shadow: inset 0 1px 0 #ef786f, inset 0 -1px 0 #da3c31, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 #ef786f, inset 0 -1px 0 #da3c31, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a53129;
+	background: #ed473b;
+	
+	
 }
 
 .v-button-danger:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-button-danger:hover:after {
@@ -2516,8 +2491,8 @@ a.v-disabled {
 
 .v-button-danger:focus:after {
 	border: inherit;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-button-danger:active:after {
@@ -2594,7 +2569,7 @@ a.v-disabled {
 	color: inherit;
 	cursor: pointer;
 	color: #197de1;
-	text-decoration: underline;
+	text-decoration: none;
 	font-weight: inherit;
 	-webkit-transition: color 140ms;
 	-moz-transition: color 140ms;
@@ -2625,74 +2600,74 @@ a.v-disabled {
 
 .v-button-tiny {
 	height: 28px;
-	padding: 0 13px;
+	padding: 0 12px;
 	
 	
 	font-size: 12px;
 	
-	border-radius: 4px;
+	border-radius: 0px;
 }
 
 .v-button-tiny:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-button-small {
 	height: 31px;
-	padding: 0 14px;
+	padding: 0 13px;
 	
 	
 	font-size: 14px;
 	
-	border-radius: 4px;
+	border-radius: 0px;
 }
 
 .v-button-small:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-button-large {
 	height: 44px;
-	padding: 0 19px;
+	padding: 0 18px;
 	
 	
 	font-size: 20px;
 	
-	border-radius: 4px;
+	border-radius: 0px;
 }
 
 .v-button-large:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-button-huge {
 	height: 59px;
-	padding: 0 26px;
+	padding: 0 25px;
 	
 	
 	font-size: 26px;
 	
-	border-radius: 4px;
+	border-radius: 0px;
 }
 
 .v-button-huge:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-button-icon-align-right [class*="wrap"] {
@@ -2785,11 +2760,11 @@ a.v-disabled {
 }
 
 :root .v-checkbox > input:focus ~ label:before {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 :root .v-checkbox > input ~ label:before, :root .v-checkbox > input ~ label:after {
@@ -2803,28 +2778,23 @@ a.v-disabled {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: 4px;
+	border-radius: 0px;
 	font-size: 13px;
 	text-align: center;
 }
 
 :root .v-checkbox > input ~ label:before {
 	height: 18.5px;
-	padding: 0 9px;
-	color: #191919;
+	padding: 0 8px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 	padding: 0;
 	height: 19px;
 }
@@ -2839,7 +2809,7 @@ a.v-disabled {
 }
 
 :root .v-checkbox > input:active ~ label:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 :root .v-checkbox > input:checked ~ label:after {
@@ -2915,11 +2885,11 @@ a.v-disabled {
 }
 
 :root .v-checkbox-small > input:focus ~ label:before {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 :root .v-checkbox-small > input ~ label:before, :root .v-checkbox-small > input ~ label:after {
@@ -2933,28 +2903,23 @@ a.v-disabled {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: 4px;
+	border-radius: 0px;
 	font-size: 11px;
 	text-align: center;
 }
 
 :root .v-checkbox-small > input ~ label:before {
 	height: 15.5px;
-	padding: 0 7px;
-	color: #191919;
+	padding: 0 6px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 	padding: 0;
 	height: 16px;
 }
@@ -2969,7 +2934,7 @@ a.v-disabled {
 }
 
 :root .v-checkbox-small > input:active ~ label:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 :root .v-checkbox-small > input:checked ~ label:after {
@@ -3045,11 +3010,11 @@ a.v-disabled {
 }
 
 :root .v-checkbox-large > input:focus ~ label:before {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 :root .v-checkbox-large > input ~ label:before, :root .v-checkbox-large > input ~ label:after {
@@ -3063,28 +3028,23 @@ a.v-disabled {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: 4px;
+	border-radius: 0px;
 	font-size: 15px;
 	text-align: center;
 }
 
 :root .v-checkbox-large > input ~ label:before {
 	height: 22px;
-	padding: 0 10px;
-	color: #191919;
+	padding: 0 9px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 	padding: 0;
 	height: 22px;
 }
@@ -3099,7 +3059,7 @@ a.v-disabled {
 }
 
 :root .v-checkbox-large > input:active ~ label:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 :root .v-checkbox-large > input:checked ~ label:after {
@@ -3172,11 +3132,11 @@ a.v-disabled {
 	height: 37px;
 	border-radius: 4px;
 	padding: 4px 9px;
-	border: 1px solid #c5c5c5;
+	border: 1px solid #b2b2b2;
 	background: white;
 	color: #474747;
-	-webkit-box-shadow: inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	box-shadow: inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
+	
+	
 	-webkit-transition: box-shadow 180ms, border 180ms;
 	-moz-transition: box-shadow 180ms, border 180ms;
 	transition: box-shadow 180ms, border 180ms;
@@ -3202,11 +3162,11 @@ a.v-disabled {
 	-webkit-transition: none;
 	-moz-transition: none;
 	transition: none;
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-filterselect [class*="input"][class*="prompt"] {
@@ -3242,9 +3202,8 @@ a.v-disabled {
 	top: 1px;
 	right: 1px;
 	bottom: 1px;
-	border-left: 1px solid #e4e4e4;
+	border-left: 1px solid #d8d8d8;
 	color: #a3a3a3;
-	border-radius: 0 3px 3px 0;
 }
 
 .v-ie8 .v-filterselect [class$="button"] {
@@ -3303,7 +3262,7 @@ a.v-disabled {
 
 .v-filterselect.v-readonly [class*="input"]:focus {
 	box-shadow: none;
-	border-color: #c5c5c5;
+	border-color: #afafaf;
 }
 
 .v-filterselect.v-readonly [class$="button"] {
@@ -3344,15 +3303,15 @@ a.v-disabled {
 .v-filterselect-suggestpopup [class$="suggestmenu"] {
 	padding: 4px 4px;
 	border-radius: 4px;
-	background-color: white;
+	background-color: #fff;
 	color: #474747;
-	-webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.09098);
-	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.09098);
+	-webkit-box-shadow: 0 0 0 2px #000;
+	box-shadow: 0 0 0 2px #000;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-	padding: 4px 4px;
+	padding: 6px 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -3401,19 +3360,17 @@ a.v-disabled {
 }
 
 .v-filterselect-suggestpopup .gwt-MenuItem-selected {
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	color: #ecf2f8;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
 }
 
 .v-filterselect-suggestpopup [class$="status"] {
 	position: absolute;
-	right: 4px;
-	background: rgba(212, 212, 212, 0.9);
-	color: #3b3b3b;
-	border-radius: 0 0 4px 4px;
+	right: 0px;
+	background: rgba(202, 202, 202, 0.9);
+	color: #393939;
+	border-radius: 0 0 0px 0px;
 	height: 23px;
 	bottom: -23px;
 	font-size: 12px;
@@ -3427,7 +3384,7 @@ a.v-disabled {
 }
 
 .v-filterselect-suggestpopup [class$="status"]  > * {
-	color: #3b3b3b;
+	color: #393939;
 	text-decoration: none;
 }
 
@@ -3451,7 +3408,7 @@ a.v-disabled {
 	-ms-transform: scale(0.8);
 	-o-transform: scale(0.8);
 	transform: scale(0.8);
-	color: #464646;
+	color: #434343;
 }
 
 .v-filterselect-suggestpopup div[class*="page"]:after {
@@ -3464,7 +3421,7 @@ a.v-disabled {
 .v-filterselect-suggestpopup div[class*="page"]:hover {
 	opacity: 1;
 	filter: none ;
-	background: rgba(250, 250, 250, 0.5);
+	background: rgba(238, 238, 238, 0.5);
 }
 
 .v-filterselect-suggestpopup div[class*="page"]:hover:after {
@@ -3493,7 +3450,7 @@ a.v-disabled {
 	-ms-transform-origin: 100% 0%;
 	-o-transform-origin: 100% 0%;
 	transform-origin: 100% 0%;
-	border-radius: 0 4px 0 4px;
+	border-radius: 0 0px 0 0px;
 }
 
 .v-filterselect-suggestpopup div[class*="prev"]:before {
@@ -3507,7 +3464,7 @@ a.v-disabled {
 	-ms-transform-origin: 100% 100%;
 	-o-transform-origin: 100% 100%;
 	transform-origin: 100% 100%;
-	border-radius: 4px 0 4px 0;
+	border-radius: 0px 0 0px 0;
 }
 
 .v-filterselect-suggestpopup div[class*="next"]:before {
@@ -3521,6 +3478,7 @@ a.v-disabled {
 .v-filterselect-no-input {
 	cursor: pointer;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
 }
 
 .v-filterselect-no-input [class*="input"] {
@@ -3528,15 +3486,11 @@ a.v-disabled {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
+	background: #eee;
 	cursor: inherit;
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
+	
+	
+	border: 0 solid #a6a6a6;
 	text-shadow: inherit;
 	text-overflow: ellipsis;
 	border-radius: inherit;
@@ -3547,11 +3501,11 @@ a.v-disabled {
 	-webkit-transition: none;
 	-moz-transition: none;
 	transition: none;
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-filterselect-no-input [class$="button"] {
@@ -3669,7 +3623,6 @@ a.v-disabled {
 	cursor: pointer;
 	position: absolute;
 	width: 28px;
-	border-radius: 0 4px 4px 0;
 }
 
 .v-filterselect-tiny [class$="button"]:before {
@@ -3719,7 +3672,7 @@ a.v-disabled {
 
 .v-filterselect-tiny.v-readonly [class*="input"]:focus {
 	box-shadow: none;
-	border-color: #c5c5c5;
+	border-color: #afafaf;
 }
 
 .v-filterselect-tiny.v-readonly [class$="button"] {
@@ -3796,7 +3749,6 @@ a.v-disabled {
 	cursor: pointer;
 	position: absolute;
 	width: 31px;
-	border-radius: 0 4px 4px 0;
 }
 
 .v-filterselect-compact [class$="button"]:before, .v-filterselect-small [class$="button"]:before {
@@ -3846,7 +3798,7 @@ a.v-disabled {
 
 .v-filterselect-compact.v-readonly [class*="input"]:focus, .v-filterselect-small.v-readonly [class*="input"]:focus {
 	box-shadow: none;
-	border-color: #c5c5c5;
+	border-color: #afafaf;
 }
 
 .v-filterselect-compact.v-readonly [class$="button"], .v-filterselect-small.v-readonly [class$="button"] {
@@ -3928,7 +3880,6 @@ a.v-disabled {
 	cursor: pointer;
 	position: absolute;
 	width: 44px;
-	border-radius: 0 4px 4px 0;
 }
 
 .v-filterselect-large [class$="button"]:before {
@@ -3978,7 +3929,7 @@ a.v-disabled {
 
 .v-filterselect-large.v-readonly [class*="input"]:focus {
 	box-shadow: none;
-	border-color: #c5c5c5;
+	border-color: #afafaf;
 }
 
 .v-filterselect-large.v-readonly [class$="button"] {
@@ -4056,7 +4007,6 @@ a.v-disabled {
 	cursor: pointer;
 	position: absolute;
 	width: 59px;
-	border-radius: 0 4px 4px 0;
 }
 
 .v-filterselect-huge [class$="button"]:before {
@@ -4106,7 +4056,7 @@ a.v-disabled {
 
 .v-filterselect-huge.v-readonly [class*="input"]:focus {
 	box-shadow: none;
-	border-color: #c5c5c5;
+	border-color: #afafaf;
 }
 
 .v-filterselect-huge.v-readonly [class$="button"] {
@@ -4119,12 +4069,12 @@ a.v-disabled {
 }
 
 .v-csslayout-well {
-	background: #f5f5f5;
-	color: #454545;
-	-webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset 0 2px 3px rgba(0, 0, 0, 0.05);
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
+	background: #e9e9e9;
+	color: #414141;
+	-webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset false;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset false;
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
 }
 
 .v-csslayout-well  > div > [class*="-caption"] {
@@ -4152,10 +4102,10 @@ a.v-disabled {
 .v-csslayout-card {
 	background: white;
 	color: #474747;
-	border-radius: 4px;
-	border: 1px solid #d5d5d5;
-	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-radius: 0px;
+	border: 2px solid #c9c9c9;
+	
+	
 }
 
 .v-csslayout-card  > .v-margin-top {
@@ -4179,31 +4129,9 @@ a.v-disabled {
 	position: relative;
 }
 
-.v-csslayout-v-component-group .v-widget ~ .v-widget:not(:last-child) {
-	border-radius: 0;
-}
-
-.v-csslayout-v-component-group .v-widget:last-child {
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
-
-.v-csslayout-v-component-group .v-widget:first-child, .v-csslayout-v-component-group .v-caption:first-child + .v-widget {
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-.v-csslayout-v-component-group .v-widget ~ .v-widget.first.first {
-	border-radius: 4px 0 0 4px;
-}
-
-.v-csslayout-v-component-group .v-widget ~ .v-widget.last.last {
-	border-radius: 0 4px 4px 0;
-}
-
 .v-csslayout-v-component-group .v-widget {
 	vertical-align: middle;
-	margin-left: -1px;
+	margin-left: 1px;
 }
 
 .v-csslayout-v-component-group .v-widget:first-child {
@@ -4298,7 +4226,7 @@ a.v-disabled {
 	width: auto !important;
 	margin-top: -0.5em;
 	padding-bottom: 0.5em;
-	border-bottom: 1px solid #dfdfdf;
+	border-bottom: 0 solid #d8d8d8;
 }
 
 .v-formlayout.light  > table {
@@ -4308,7 +4236,7 @@ a.v-disabled {
 .v-formlayout.light  > table > tbody > tr > td {
 	padding-top: 0;
 	height: 37px;
-	border-bottom: 1px solid #eaeaea;
+	border-bottom: 0 solid #e8e8e8;
 }
 
 .v-formlayout.light  > table > tbody > [class*="lastrow"] > td {
@@ -4316,7 +4244,7 @@ a.v-disabled {
 }
 
 .v-formlayout.light  > table > tbody > tr > [class*="captioncell"] {
-	color: #7d7d7d;
+	color: #777777;
 	text-align: right;
 	padding-left: 13px;
 	line-height: 37px;
@@ -4375,11 +4303,11 @@ a.v-disabled {
 	-webkit-transition: none;
 	-moz-transition: none;
 	transition: none;
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), none;
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), none;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6, none;
+	box-shadow: 0 0 0 1px #0072C6, none;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-formlayout.light  > table > tbody > [class*="row"] > [class*="contentcell"]  > .v-textfield:focus, .v-formlayout.light  > table > tbody > [class*="row"] > [class*="contentcell"]  > .v-textarea:focus, .v-formlayout.light  > table > tbody > [class*="row"] > [class*="contentcell"]  > .v-filterselect input:focus, .v-formlayout.light  > table > tbody > [class*="row"] > [class*="contentcell"]  > .v-datefield input:focus, .v-formlayout.light  > table > tbody > [class*="row"] > [class*="contentcell"]  > .v-richtextarea:focus {
@@ -5052,7 +4980,7 @@ a.v-disabled {
 	-moz-user-select: text;
 	-ms-user-select: text;
 	user-select: text;
-	background-color: #fafafa;
+	background-color: #eee;
 }
 
 .v-grid.v-disabled {
@@ -5061,9 +4989,7 @@ a.v-disabled {
 }
 
 .v-grid-header .v-grid-cell {
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
+	background: #fafafa;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
@@ -5080,28 +5006,20 @@ a.v-disabled {
 }
 
 .v-grid-footer .v-grid-cell {
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
+	background: #fafafa;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .v-grid-header-deco {
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
+	background: #fafafa;
 }
 
 .v-grid-footer-deco, .v-grid-horizontal-scrollbar-deco {
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
+	background: #fafafa;
 }
 
 .v-grid-row-selected  > .v-grid-cell {
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	color: #c8dbed;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
 	border-color: #1d69b4;
@@ -5112,15 +5030,15 @@ a.v-disabled {
 }
 
 .v-grid-editor {
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	border-color: #197de1;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	border-color: #0072C6;
 }
 
 .v-grid-editor-footer {
 	font-size: 14px;
 	padding: 0 6px;
-	background: #fafafa;
+	background: #fff;
 	-webkit-animation: valo-grid-editor-footer-animate-in 200ms 120ms backwards;
 	-moz-animation: valo-grid-editor-footer-animate-in 200ms 120ms backwards;
 	animation: valo-grid-editor-footer-animate-in 200ms 120ms backwards;
@@ -5160,8 +5078,8 @@ a.v-disabled {
 	border: none;
 	border-radius: 0;
 	background: transparent;
-	-webkit-box-shadow: inset 0 1px 0 #f2f2f2;
-	box-shadow: inset 0 1px 0 #f2f2f2;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .v-grid-editor-cells > div input[type="text"].v-datefield-textfield {
@@ -5209,7 +5127,7 @@ a.v-disabled {
 .v-grid-editor-save, .v-grid-editor-cancel {
 	cursor: pointer;
 	color: #197de1;
-	text-decoration: underline;
+	text-decoration: none;
 	font-weight: inherit;
 	-webkit-transition: color 140ms;
 	-moz-transition: color 140ms;
@@ -5244,9 +5162,7 @@ a.v-disabled {
 }
 
 .v-grid-sidebar.v-contextmenu.closed {
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
+	background: #fafafa;
 }
 
 .v-grid-scroller::-webkit-scrollbar {
@@ -5287,11 +5203,11 @@ a.v-disabled {
 	height: 37px;
 	border-radius: 4px;
 	padding: 4px 9px;
-	border: 1px solid #c5c5c5;
+	border: 1px solid #b2b2b2;
 	background: white;
 	color: #474747;
-	-webkit-box-shadow: inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	box-shadow: inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
+	
+	
 	-webkit-transition: box-shadow 180ms, border 180ms;
 	-moz-transition: box-shadow 180ms, border 180ms;
 	transition: box-shadow 180ms, border 180ms;
@@ -5314,11 +5230,11 @@ a.v-disabled {
 	-webkit-transition: none;
 	-moz-transition: none;
 	transition: none;
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-textfield[class*="prompt"] {
@@ -5334,7 +5250,7 @@ a.v-disabled {
 
 .v-textfield-readonly:focus {
 	box-shadow: none;
-	border-color: #c5c5c5;
+	border-color: #afafaf;
 }
 
 .v-textfield-error {
@@ -5506,7 +5422,6 @@ a.v-disabled {
 	font-size: 14px;
 	font-weight: 400;
 	padding-bottom: 0.3em;
-	padding-left: 1px;
 	margin: 0;
 }
 
@@ -5545,7 +5460,6 @@ a.v-disabled {
 	font-size: 14px;
 	font-weight: 400;
 	padding-bottom: 0.3em;
-	padding-left: 1px;
 	margin: 0;
 }
 
@@ -5584,7 +5498,6 @@ a.v-disabled {
 	font-size: 14px;
 	font-weight: 400;
 	padding-bottom: 0.3em;
-	padding-left: 1px;
 	margin: 0;
 }
 
@@ -5623,7 +5536,6 @@ a.v-disabled {
 	font-size: 14px;
 	font-weight: 400;
 	padding-bottom: 0.3em;
-	padding-left: 1px;
 	margin: 0;
 }
 
@@ -5662,7 +5574,6 @@ a.v-disabled {
 	font-size: 14px;
 	font-weight: 400;
 	padding-bottom: 0.3em;
-	padding-left: 1px;
 	margin: 0;
 }
 
@@ -5701,7 +5612,6 @@ a.v-disabled {
 	font-size: 14px;
 	font-weight: 400;
 	padding-bottom: 0.3em;
-	padding-left: 1px;
 	margin: 0;
 }
 
@@ -5754,11 +5664,11 @@ a.v-disabled {
 	height: 37px;
 	border-radius: 4px;
 	padding: 6px;
-	border: 1px solid #c5c5c5;
+	border: 1px solid #b2b2b2;
 	background: white;
 	color: #474747;
-	-webkit-box-shadow: inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	box-shadow: inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
+	
+	
 	-webkit-transition: box-shadow 180ms, border 180ms;
 	-moz-transition: box-shadow 180ms, border 180ms;
 	transition: box-shadow 180ms, border 180ms;
@@ -5784,11 +5694,11 @@ a.v-disabled {
 	-webkit-transition: none;
 	-moz-transition: none;
 	transition: none;
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-textarea[class*="prompt"] {
@@ -5810,7 +5720,7 @@ a.v-disabled {
 
 .v-textarea-readonly:focus {
 	box-shadow: none;
-	border-color: #c5c5c5;
+	border-color: #afafaf;
 }
 
 .v-textarea-error {
@@ -6043,11 +5953,11 @@ a.v-disabled {
 	height: 37px;
 	border-radius: 4px;
 	padding: 4px 9px;
-	border: 1px solid #c5c5c5;
+	border: 1px solid #b2b2b2;
 	background: white;
 	color: #474747;
-	-webkit-box-shadow: inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	box-shadow: inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
+	
+	
 	-webkit-transition: box-shadow 180ms, border 180ms;
 	-moz-transition: box-shadow 180ms, border 180ms;
 	transition: box-shadow 180ms, border 180ms;
@@ -6073,11 +5983,11 @@ a.v-disabled {
 	-webkit-transition: none;
 	-moz-transition: none;
 	transition: none;
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-datefield [class*="textfield"][class*="prompt"] {
@@ -6107,7 +6017,7 @@ a.v-disabled {
 	bottom: 1px;
 	left: 1px;
 	border: none;
-	border-right: 1px solid #e4e4e4;
+	border-right: 1px solid #d8d8d8;
 	color: #a3a3a3;
 	border-radius: 3px 0 0 3px;
 }
@@ -6158,7 +6068,7 @@ a.v-disabled {
 
 .v-datefield.v-readonly [class*="textfield"]:focus {
 	box-shadow: none;
-	border-color: #c5c5c5;
+	border-color: #afafaf;
 }
 
 .v-datefield.v-readonly [class*="button"] {
@@ -6202,8 +6112,8 @@ a.v-disabled {
 	border-radius: 4px;
 	background-color: white;
 	color: #474747;
-	-webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.09098);
-	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.09098);
+	-webkit-box-shadow: 0 0 0 2px #000;
+	box-shadow: 0 0 0 2px #000;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
@@ -6252,12 +6162,11 @@ a.v-disabled {
 	box-sizing: border-box;
 	width: 30px;
 	height: 26px;
-	border: 1px solid transparent;
+	border: 0 solid transparent;
 	line-height: 26px;
 	text-align: center;
 	font-size: 14px;
-	background: #fafafa;
-	border-radius: 2px;
+	background: #eee;
 	-webkit-transition: color 200ms;
 	-moz-transition: color 200ms;
 	transition: color 200ms;
@@ -6273,43 +6182,41 @@ a.v-disabled {
 }
 
 .v-datefield-popup .v-datefield-calendarpanel-day-offmonth {
-	color: #a0a0a0;
+	color: #989898;
 	background: transparent;
 }
 
 .v-datefield-popup .v-datefield-calendarpanel-day-today {
-	color: #191919;
+	color: #181818;
 	font-weight: 600;
-	border-color: #afafaf;
+	border-color: #a7a7a7;
 }
 
 .v-datefield-popup .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-selected, .v-datefield-popup .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-selected:hover {
 	color: #c8dbed;
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	border: none;
 	font-weight: 600;
 }
 
 .v-datefield-popup .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-focused {
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 	position: relative;
 }
 
 .v-ie8 .v-datefield-popup .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-focused {
-	border-color: #197de1;
+	border-color: #0072C6;
 }
 
 .v-datefield-popup .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-outside-range, .v-datefield-popup .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-outside-range:hover {
-	color: #a0a0a0;
+	color: #989898;
 	cursor: not-allowed;
 }
 
 .v-datefield-popup .v-datefield-calendarpanel-weekdays {
 	height: 26px;
-	color: rgba(133, 133, 133, 0.85);
+	color: rgba(126, 126, 126, 0.85);
 }
 
 .v-datefield-popup .v-datefield-calendarpanel-weekdays strong {
@@ -6342,7 +6249,7 @@ a.v-disabled {
 }
 
 .v-datefield-popup td[class*="year"] button:before, .v-datefield-popup td[class*="month"] button:before {
-	color: #a0a0a0;
+	color: #989898;
 	font-size: 21px;
 	line-height: 24px;
 	-webkit-transition: color 200ms;
@@ -6351,7 +6258,7 @@ a.v-disabled {
 }
 
 .v-datefield-popup td[class*="year"] button:hover:before, .v-datefield-popup td[class*="month"] button:hover:before {
-	color: #197de1;
+	color: #0072C6;
 }
 
 .v-datefield-popup td[class*="year"] button.outside-range, .v-datefield-popup td[class*="month"] button.outside-range {
@@ -6361,7 +6268,7 @@ a.v-disabled {
 }
 
 .v-datefield-popup td[class*="year"] button.outside-range:hover:before, .v-datefield-popup td[class*="month"] button.outside-range:hover:before {
-	color: #a0a0a0;
+	color: #989898;
 }
 
 .v-datefield-popup .v-button-prevyear:before {
@@ -6395,7 +6302,7 @@ a.v-disabled {
 
 .v-datefield-popup .v-datefield-calendarpanel-weeknumber, .v-datefield-popup .v-datefield-calendarpanel-weekdays.v-datefield-calendarpanel-weeknumbers td:first-child {
 	width: 30px;
-	color: rgba(133, 133, 133, 0.85);
+	color: rgba(126, 126, 126, 0.85);
 	font-size: 14px;
 	display: inline-block;
 	text-align: left;
@@ -6412,11 +6319,11 @@ a.v-disabled {
 	bottom: 0;
 	left: 0;
 	width: 34px;
-	border-top: 1px solid #eaeaea;
-	border-right: 1px solid #eaeaea;
-	border-top-right-radius: 4px;
-	border-bottom-left-radius: 4px;
-	background: #fafafa;
+	border-top: 0 solid #e8e8e8;
+	border-right: 0 solid #e8e8e8;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	background: #fff;
 }
 
 .v-datefield-popup td.v-datefield-calendarpanel-time {
@@ -6445,12 +6352,11 @@ a.v-disabled {
 	box-sizing: border-box;
 	width: 30px;
 	height: 26px;
-	border: 1px solid transparent;
+	border: 0 solid transparent;
 	line-height: 26px;
 	text-align: center;
 	font-size: 14px;
-	background: #fafafa;
-	border-radius: 2px;
+	background: #eee;
 	-webkit-transition: color 200ms;
 	-moz-transition: color 200ms;
 	transition: color 200ms;
@@ -6466,43 +6372,41 @@ a.v-disabled {
 }
 
 .v-datefield-calendarpanel-day-offmonth {
-	color: #a0a0a0;
+	color: #989898;
 	background: transparent;
 }
 
 .v-datefield-calendarpanel-day-today {
-	color: #191919;
+	color: #181818;
 	font-weight: 600;
-	border-color: #afafaf;
+	border-color: #a7a7a7;
 }
 
 .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-selected, .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-selected:hover {
 	color: #c8dbed;
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	border: none;
 	font-weight: 600;
 }
 
 .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-focused {
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 	position: relative;
 }
 
 .v-ie8 .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-focused {
-	border-color: #197de1;
+	border-color: #0072C6;
 }
 
 .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-outside-range, .v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-outside-range:hover {
-	color: #a0a0a0;
+	color: #989898;
 	cursor: not-allowed;
 }
 
 .v-datefield-calendarpanel-weekdays {
 	height: 26px;
-	color: rgba(133, 133, 133, 0.85);
+	color: rgba(126, 126, 126, 0.85);
 }
 
 .v-datefield-calendarpanel-weekdays strong {
@@ -6535,7 +6439,7 @@ td[class*="year"] button, td[class*="month"] button {
 }
 
 td[class*="year"] button:before, td[class*="month"] button:before {
-	color: #a0a0a0;
+	color: #989898;
 	font-size: 21px;
 	line-height: 24px;
 	-webkit-transition: color 200ms;
@@ -6544,7 +6448,7 @@ td[class*="year"] button:before, td[class*="month"] button:before {
 }
 
 td[class*="year"] button:hover:before, td[class*="month"] button:hover:before {
-	color: #197de1;
+	color: #0072C6;
 }
 
 td[class*="year"] button.outside-range, td[class*="month"] button.outside-range {
@@ -6554,7 +6458,7 @@ td[class*="year"] button.outside-range, td[class*="month"] button.outside-range 
 }
 
 td[class*="year"] button.outside-range:hover:before, td[class*="month"] button.outside-range:hover:before {
-	color: #a0a0a0;
+	color: #989898;
 }
 
 .v-button-prevyear:before {
@@ -6588,7 +6492,7 @@ td.v-datefield-calendarpanel-month {
 
 .v-datefield-calendarpanel-weeknumber, .v-datefield-calendarpanel-weekdays.v-datefield-calendarpanel-weeknumbers td:first-child {
 	width: 30px;
-	color: rgba(133, 133, 133, 0.85);
+	color: rgba(126, 126, 126, 0.85);
 	font-size: 14px;
 	display: inline-block;
 	text-align: left;
@@ -6605,11 +6509,11 @@ td.v-datefield-calendarpanel-month {
 	bottom: 0;
 	left: 0;
 	width: 34px;
-	border-top: 1px solid #eaeaea;
-	border-right: 1px solid #eaeaea;
-	border-top-right-radius: 4px;
-	border-bottom-left-radius: 4px;
-	background: #fafafa;
+	border-top: 0 solid #e8e8e8;
+	border-right: 0 solid #e8e8e8;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	background: #fff;
 }
 
 td.v-datefield-calendarpanel-time {
@@ -6762,7 +6666,7 @@ td.v-datefield-calendarpanel-time .v-label {
 
 .v-datefield-tiny.v-readonly [class*="textfield"]:focus {
 	box-shadow: none;
-	border-color: #c5c5c5;
+	border-color: #afafaf;
 }
 
 .v-datefield-tiny.v-readonly [class*="button"] {
@@ -6877,7 +6781,7 @@ td.v-datefield-calendarpanel-time .v-label {
 
 .v-datefield-compact.v-readonly [class*="textfield"]:focus, .v-datefield-small.v-readonly [class*="textfield"]:focus {
 	box-shadow: none;
-	border-color: #c5c5c5;
+	border-color: #afafaf;
 }
 
 .v-datefield-compact.v-readonly [class*="button"], .v-datefield-small.v-readonly [class*="button"] {
@@ -6997,7 +6901,7 @@ td.v-datefield-calendarpanel-time .v-label {
 
 .v-datefield-large.v-readonly [class*="textfield"]:focus {
 	box-shadow: none;
-	border-color: #c5c5c5;
+	border-color: #afafaf;
 }
 
 .v-datefield-large.v-readonly [class*="button"] {
@@ -7113,7 +7017,7 @@ td.v-datefield-calendarpanel-time .v-label {
 
 .v-datefield-huge.v-readonly [class*="textfield"]:focus {
 	box-shadow: none;
-	border-color: #c5c5c5;
+	border-color: #afafaf;
 }
 
 .v-datefield-huge.v-readonly [class*="button"] {
@@ -7140,12 +7044,11 @@ td.v-datefield-calendarpanel-time .v-label {
 	box-sizing: border-box;
 	width: 30px;
 	height: 26px;
-	border: 1px solid transparent;
+	border: 0 solid transparent;
 	line-height: 26px;
 	text-align: center;
 	font-size: 14px;
-	background: #fafafa;
-	border-radius: 2px;
+	background: #eee;
 	-webkit-transition: color 200ms;
 	-moz-transition: color 200ms;
 	transition: color 200ms;
@@ -7161,43 +7064,41 @@ td.v-datefield-calendarpanel-time .v-label {
 }
 
 .v-inline-datefield-calendarpanel-day-offmonth {
-	color: #a0a0a0;
+	color: #989898;
 	background: transparent;
 }
 
 .v-inline-datefield-calendarpanel-day-today {
-	color: #191919;
+	color: #181818;
 	font-weight: 600;
-	border-color: #afafaf;
+	border-color: #a7a7a7;
 }
 
 .v-inline-datefield-calendarpanel-day.v-inline-datefield-calendarpanel-day-selected, .v-inline-datefield-calendarpanel-day.v-inline-datefield-calendarpanel-day-selected:hover {
 	color: #c8dbed;
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	border: none;
 	font-weight: 600;
 }
 
 .v-inline-datefield-calendarpanel-day.v-inline-datefield-calendarpanel-day-focused {
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 	position: relative;
 }
 
 .v-ie8 .v-inline-datefield-calendarpanel-day.v-inline-datefield-calendarpanel-day-focused {
-	border-color: #197de1;
+	border-color: #0072C6;
 }
 
 .v-inline-datefield-calendarpanel-day.v-inline-datefield-calendarpanel-day-outside-range, .v-inline-datefield-calendarpanel-day.v-inline-datefield-calendarpanel-day-outside-range:hover {
-	color: #a0a0a0;
+	color: #989898;
 	cursor: not-allowed;
 }
 
 .v-inline-datefield-calendarpanel-weekdays {
 	height: 26px;
-	color: rgba(133, 133, 133, 0.85);
+	color: rgba(126, 126, 126, 0.85);
 }
 
 .v-inline-datefield-calendarpanel-weekdays strong {
@@ -7230,7 +7131,7 @@ td[class*="year"] button, td[class*="month"] button {
 }
 
 td[class*="year"] button:before, td[class*="month"] button:before {
-	color: #a0a0a0;
+	color: #989898;
 	font-size: 21px;
 	line-height: 24px;
 	-webkit-transition: color 200ms;
@@ -7239,7 +7140,7 @@ td[class*="year"] button:before, td[class*="month"] button:before {
 }
 
 td[class*="year"] button:hover:before, td[class*="month"] button:hover:before {
-	color: #197de1;
+	color: #0072C6;
 }
 
 td[class*="year"] button.outside-range, td[class*="month"] button.outside-range {
@@ -7249,7 +7150,7 @@ td[class*="year"] button.outside-range, td[class*="month"] button.outside-range 
 }
 
 td[class*="year"] button.outside-range:hover:before, td[class*="month"] button.outside-range:hover:before {
-	color: #a0a0a0;
+	color: #989898;
 }
 
 .v-button-prevyear:before {
@@ -7283,7 +7184,7 @@ td.v-inline-datefield-calendarpanel-month {
 
 .v-inline-datefield-calendarpanel-weeknumber, .v-inline-datefield-calendarpanel-weekdays.v-inline-datefield-calendarpanel-weeknumbers td:first-child {
 	width: 30px;
-	color: rgba(133, 133, 133, 0.85);
+	color: rgba(126, 126, 126, 0.85);
 	font-size: 14px;
 	display: inline-block;
 	text-align: left;
@@ -7300,11 +7201,11 @@ td.v-inline-datefield-calendarpanel-month {
 	bottom: 0;
 	left: 0;
 	width: 34px;
-	border-top: 1px solid #eaeaea;
-	border-right: 1px solid #eaeaea;
-	border-top-right-radius: 4px;
-	border-bottom-left-radius: 4px;
-	background: #fafafa;
+	border-top: 0 solid #e8e8e8;
+	border-right: 0 solid #e8e8e8;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	background: #fff;
 }
 
 td.v-inline-datefield-calendarpanel-time {
@@ -7354,24 +7255,19 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	-webkit-touch-callout: none;
 	cursor: pointer;
 	height: 37px;
-	padding: 0 16px;
-	color: #191919;
+	padding: 0 15px;
+	color: #181818;
 	font-weight: 400;
 	
 	cursor: default;
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 	padding: 0;
 	text-align: left;
-	line-height: 35px;
+	line-height: 37px;
 }
 
 .v-menubar:after {
@@ -7404,16 +7300,16 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 
 .v-menubar:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-menubar:focus:after {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-menubar  > .v-menubar-menuitem {
@@ -7442,37 +7338,28 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	
 	cursor: pointer;
 	border-radius: 0;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7;
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 	background: transparent;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	border-width: 0 1px 0 0;
+	border-width: 0 0 0 0;
 	border-color: inherit;
 	height: 100%;
 	line-height: inherit;
 	vertical-align: top;
 	text-align: center;
+	margin-right: 1px;
 }
 
 .v-menubar > .v-menubar-menuitem:first-child {
 	border-left-width: 0;
-	border-radius: 3px 0 0 3px;
 }
 
 .v-menubar > .v-menubar-menuitem:last-child {
-	border-radius: 0 3px 3px 0;
 	border-right-width: 0;
-}
-
-.v-menubar > .v-menubar-menuitem:first-child:last-child {
-	border-radius: 3px;
 }
 
 .v-menubar > .v-menubar-menuitem:before {
@@ -7490,12 +7377,12 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-menubar > .v-menubar-menuitem:hover:before {
-	background-color: rgba(186, 186, 186, 0.1);
+	background-color: rgba(174, 174, 174, 0.1);
 	border: none;
 }
 
 .v-menubar > .v-menubar-menuitem:active:before {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 .v-menubar > .v-menubar-menuitem .v-icon {
@@ -7515,10 +7402,10 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 .v-menubar > .v-menubar-menuitem-checked {
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	background-color: #ededed;
-	background-image: -webkit-linear-gradient(bottom, #ededed 2%, #e9e9e9 98%);
-	background-image: linear-gradient(to top,#ededed 2%, #e9e9e9 98%);
-	color: #181818;
+	background-color: #e2e2e2;
+	background-image: -webkit-linear-gradient(bottom, #e2e2e2 0%, #e2e2e2 100%);
+	background-image: linear-gradient(to top,#e2e2e2 0%, #e2e2e2 100%);
+	color: #171717;
 }
 
 .v-disabled > .v-menubar-menuitem, .v-menubar > .v-menubar-menuitem-disabled {
@@ -7540,15 +7427,10 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	
 	
 	border-radius: 0;
-	border: 1px solid #1362b1;
-	border-top-color: #156ab3;
-	border-bottom-color: #1156a8;
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
-	-webkit-box-shadow: inset 0 1px 0 #4d98e6, inset 0 -1px 0 #166bca;
-	box-shadow: inset 0 1px 0 #4d98e6, inset 0 -1px 0 #166bca;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+	border: 0 solid #11579d;
+	background: #197de1;
+	
+	
 	border-top-width: 0;
 	border-left-width: 0;
 	border-bottom-width: 0;
@@ -7579,15 +7461,15 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 .v-menubar-popup {
 	padding: 4px 4px;
 	border-radius: 4px;
-	background-color: white;
+	background-color: #fff;
 	color: #474747;
-	-webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.09098);
-	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.09098);
+	-webkit-box-shadow: 0 0 0 2px #000;
+	box-shadow: 0 0 0 2px #000;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-	padding: 4px 4px;
+	padding: 6px 0;
 	margin: 5px 0 0 1px !important;
 }
 
@@ -7654,19 +7536,18 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-menubar-popup .v-menubar-menuitem-selected {
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	color: #ecf2f8;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
 }
 
 .v-menubar-popup .v-menubar-separator {
 	display: block;
-	margin: 4px 0;
+	margin: 6px 0;
 	height: 0;
 	overflow: hidden;
-	border-bottom: 1px solid #e4e4e4;
+	border-bottom: 0 solid #d8d8d8;
+	border-bottom-width: 1px;
 }
 
 .v-menubar-popup [class*="checked"] .v-menubar-menuitem-caption:before {
@@ -7686,24 +7567,24 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 
 .v-menubar-small {
 	height: 31px;
-	padding: 0 14px;
+	padding: 0 13px;
 	
 	font-weight: 400;
 	
 	cursor: default;
-	border-radius: 4px;
+	border-radius: 0px;
 	padding: 0;
 	text-align: left;
-	line-height: 29px;
+	line-height: 31px;
 	font-size: 14px;
 }
 
 .v-menubar-small:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-menubar-small  > .v-menubar-menuitem {
@@ -7717,7 +7598,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 .v-menubar-borderless {
 	border: none;
 	border-radius: 0;
-	padding: 1px;
+	padding: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	text-shadow: none;
@@ -7734,7 +7615,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	box-shadow: none;
 	border: none;
 	margin-right: 1px;
-	border-radius: 4px;
+	border-radius: 0px;
 	color: #197de1;
 	padding: 0 12px;
 	-webkit-transition: color 140ms;
@@ -7743,7 +7624,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-menubar-borderless .v-menubar-menuitem:first-child, .v-menubar-borderless .v-menubar-menuitem:last-child, .v-menubar-borderless .v-menubar-menuitem:first-child:last-child {
-	border-radius: 4px;
+	border-radius: 0px;
 }
 
 .v-menubar-borderless .v-menubar-menuitem:before {
@@ -7759,13 +7640,13 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-menubar-borderless .v-menubar-menuitem-checked, .v-menubar-borderless .v-menubar-menuitem-checked:first-child {
-	border: 1px solid #c5c5c5;
+	border: 0 solid #a6a6a6;
 	color: #197de1;
 }
 
 .v-menubar-borderless .v-menubar-menuitem-checked .v-menubar-menuitem-caption, .v-menubar-borderless .v-menubar-menuitem-checked:first-child .v-menubar-menuitem-caption {
 	position: relative;
-	top: -1px;
+	top: 0;
 }
 
 .v-menubar-borderless .v-menubar-menuitem-selected {
@@ -7812,11 +7693,11 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 :root .v-radiobutton > input:focus ~ label:before {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 :root .v-radiobutton > input ~ label:before, :root .v-radiobutton > input ~ label:after {
@@ -7830,28 +7711,23 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: 4px;
+	border-radius: 0px;
 	font-size: 13px;
 	text-align: center;
 }
 
 :root .v-radiobutton > input ~ label:before {
 	height: 18.5px;
-	padding: 0 9px;
-	color: #191919;
+	padding: 0 8px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 	padding: 0;
 	height: 19px;
 }
@@ -7866,7 +7742,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 :root .v-radiobutton > input:active ~ label:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 :root .v-radiobutton > input:checked ~ label:after {
@@ -7975,11 +7851,11 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 :root .v-select-optiongroup-small .v-checkbox > input:focus ~ label:before {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 :root .v-select-optiongroup-small .v-checkbox > input ~ label:before, :root .v-select-optiongroup-small .v-checkbox > input ~ label:after {
@@ -7993,28 +7869,23 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: 4px;
+	border-radius: 0px;
 	font-size: 11px;
 	text-align: center;
 }
 
 :root .v-select-optiongroup-small .v-checkbox > input ~ label:before {
 	height: 15.5px;
-	padding: 0 7px;
-	color: #191919;
+	padding: 0 6px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 	padding: 0;
 	height: 16px;
 }
@@ -8029,7 +7900,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 :root .v-select-optiongroup-small .v-checkbox > input:active ~ label:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 :root .v-select-optiongroup-small .v-checkbox > input:checked ~ label:after {
@@ -8104,11 +7975,11 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 :root .v-select-optiongroup-small .v-radiobutton > input:focus ~ label:before {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 :root .v-select-optiongroup-small .v-radiobutton > input ~ label:before, :root .v-select-optiongroup-small .v-radiobutton > input ~ label:after {
@@ -8122,28 +7993,23 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: 4px;
+	border-radius: 0px;
 	font-size: 11px;
 	text-align: center;
 }
 
 :root .v-select-optiongroup-small .v-radiobutton > input ~ label:before {
 	height: 15.5px;
-	padding: 0 7px;
-	color: #191919;
+	padding: 0 6px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 	padding: 0;
 	height: 16px;
 }
@@ -8158,7 +8024,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 :root .v-select-optiongroup-small .v-radiobutton > input:active ~ label:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 :root .v-select-optiongroup-small .v-radiobutton > input:checked ~ label:after {
@@ -8267,11 +8133,11 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 :root .v-select-optiongroup-large .v-checkbox > input:focus ~ label:before {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 :root .v-select-optiongroup-large .v-checkbox > input ~ label:before, :root .v-select-optiongroup-large .v-checkbox > input ~ label:after {
@@ -8285,28 +8151,23 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: 4px;
+	border-radius: 0px;
 	font-size: 15px;
 	text-align: center;
 }
 
 :root .v-select-optiongroup-large .v-checkbox > input ~ label:before {
 	height: 22px;
-	padding: 0 10px;
-	color: #191919;
+	padding: 0 9px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 	padding: 0;
 	height: 22px;
 }
@@ -8321,7 +8182,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 :root .v-select-optiongroup-large .v-checkbox > input:active ~ label:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 :root .v-select-optiongroup-large .v-checkbox > input:checked ~ label:after {
@@ -8396,11 +8257,11 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 :root .v-select-optiongroup-large .v-radiobutton > input:focus ~ label:before {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5), inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 :root .v-select-optiongroup-large .v-radiobutton > input ~ label:before, :root .v-select-optiongroup-large .v-radiobutton > input ~ label:after {
@@ -8414,28 +8275,23 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border-radius: 4px;
+	border-radius: 0px;
 	font-size: 15px;
 	text-align: center;
 }
 
 :root .v-select-optiongroup-large .v-radiobutton > input ~ label:before {
 	height: 22px;
-	padding: 0 10px;
-	color: #191919;
+	padding: 0 9px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 	padding: 0;
 	height: 22px;
 }
@@ -8450,7 +8306,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 :root .v-select-optiongroup-large .v-radiobutton > input:active ~ label:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 :root .v-select-optiongroup-large .v-radiobutton > input:checked ~ label:after {
@@ -8543,7 +8399,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 .v-link {
 	cursor: pointer;
 	color: #197de1;
-	text-decoration: underline;
+	text-decoration: none;
 	font-weight: inherit;
 	-webkit-transition: color 140ms;
 	-moz-transition: color 140ms;
@@ -8585,14 +8441,13 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	border-radius: 4px;
 	background-color: white;
 	color: #474747;
-	-webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.09098);
-	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.09098);
+	-webkit-box-shadow: 0 0 0 2px #000;
+	box-shadow: 0 0 0 2px #000;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-	-webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 16px 80px -6px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.09098);
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 16px 80px -6px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.09098);
+	border-radius: 4px;
 	padding: 0;
 	min-width: 148px !important;
 	min-height: 37px !important;
@@ -8628,10 +8483,10 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	bottom: 0;
 	left: 0;
 	background-color: #222;
-	background-image: -webkit-radial-gradient(50% 50%, circle, #222, #0e0e0e);
-	background-image: radial-gradient(  circle at 50% 50%, #222, #0e0e0e);
-	opacity: 0.72;
-	filter: alpha(opacity=72) ;
+	background-image: -webkit-radial-gradient(50% 50%, circle, #222, #222222);
+	background-image: radial-gradient(  circle at 50% 50%, #222, #222222);
+	opacity: 0.8;
+	filter: alpha(opacity=80) ;
 	-webkit-animation: valo-animate-in-fade 400ms 100ms backwards;
 	-moz-animation: valo-animate-in-fade 400ms 100ms backwards;
 	animation: valo-animate-in-fade 400ms 100ms backwards;
@@ -8674,8 +8529,8 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	right: 0;
 	left: 0;
 	height: 0;
-	border-top: 1px solid #dfdfdf;
-	border-color: rgba(197, 197, 197, 0.5);
+	border-top: 1px solid #cacaca;
+	border-color: rgba(166, 166, 166, 0.5);
 }
 
 .v-window-header {
@@ -8776,7 +8631,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	border-radius: 4px;
+	border-radius: 0px;
 	margin-top: 0 !important;
 }
 
@@ -8840,7 +8695,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-window-contents  > .v-scrollable .v-panel-captionwrap:after {
-	border-color: #dfdfdf;
+	border-color: #cacaca;
 }
 
 .v-window-contents  > .v-scrollable .v-panel-content:before {
@@ -8892,9 +8747,9 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	padding: 7px 12px;
 	position: relative;
 	z-index: 2;
-	border-top: 1px solid #dfdfdf;
-	border-bottom: 1px solid #dfdfdf;
-	background-color: #fafafa;
+	border-top: 0 solid #cacaca;
+	border-bottom: 0 solid #cacaca;
+	background-color: #eee;
 }
 
 .v-window-top-toolbar.v-menubar {
@@ -8904,16 +8759,16 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 .v-window-top-toolbar.v-menubar-borderless {
 	padding-left: 6px;
 	padding-right: 6px;
-	margin: 5px 0;
+	margin: 6px 0;
 }
 
 .v-window-bottom-toolbar.v-layout {
 	padding: 7px 12px;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #f0f0f0 0, #fafafa 4px);
-	background-image: linear-gradient(to bottom,#f0f0f0 0, #fafafa 4px);
-	border-top: 1px solid #dfdfdf;
-	border-radius: 0 0 4px 4px;
+	background-color: #eee;
+	background-image: -webkit-linear-gradient(top, #eeeeee 0, #eee 4px);
+	background-image: linear-gradient(to bottom,#eeeeee 0, #eee 4px);
+	border-top: 0 solid #cacaca;
+	border-radius: 0 0 0px 0px;
 }
 
 .v-margin-left.v-margin-right.v-margin-top .v-window-top-toolbar.v-layout {
@@ -9032,7 +8887,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	margin-top: -28px;
 	width: 100%;
 	height: 28px;
-	border-radius: 4px;
+	border-radius: 0px;
 	opacity: 0;
 	-webkit-transition: opacity 120ms;
 	-moz-transition: opacity 120ms;
@@ -9068,11 +8923,11 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 
 .v-tree-node-focused:after {
 	opacity: 1;
-	border: 1px solid #197de1;
+	border: 1px solid #0072C6;
 }
 
 .v-ie8 .v-tree-node-focused {
-	outline: 1px dotted #197de1;
+	outline: 1px dotted #0072C6;
 }
 
 .v-tree-node-selected {
@@ -9082,16 +8937,12 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 
 .v-tree-node-selected:after {
 	opacity: 1;
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	border: none;
 }
 
 .v-ie8 .v-tree-node-selected {
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 }
 
 .v-tree-node-children {
@@ -9108,12 +8959,12 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	position: absolute;
 	height: 2px;
 	width: 100%;
-	background: #197de1;
+	background: #0072C6;
 	font-size: 32px;
 	line-height: 2px;
-	color: #197de1;
+	color: #0072C6;
 	text-indent: -4px;
-	text-shadow: 0 0 1px #fafafa, 0 0 1px #fafafa;
+	text-shadow: 0 0 1px #eee, 0 0 1px #eee;
 	opacity: 1;
 	visibility: visible;
 }
@@ -9123,14 +8974,14 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-tree-node-caption-drag-center {
-	-webkit-box-shadow: 0 0 0 2px #197de1;
-	box-shadow: 0 0 0 2px #197de1;
+	-webkit-box-shadow: 0 0 0 2px #0072C6;
+	box-shadow: 0 0 0 2px #0072C6;
 	position: relative;
-	border-radius: 4px;
+	border-radius: 0px;
 }
 
 .v-ie8 .v-tree-node-caption-drag-center {
-	outline: 2px solid #197de1;
+	outline: 2px solid #0072C6;
 }
 
 .v-ff  .v-tree-node-drag-top:before, .v-ff  .v-tree-node-drag-bottom:after {
@@ -9143,25 +8994,23 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 
 .v-table {
 	position: relative;
-	background: #fafafa;
-	color: #464646;
+	background: #eee;
+	color: #434343;
 	overflow: hidden;
 }
 
 .v-table-header table, .v-table-footer table, .v-table-table {
-	-webkit-box-shadow: 0 0 0 1px #d4d4d4;
-	box-shadow: 0 0 0 1px #d4d4d4;
+	-webkit-box-shadow: 0 0 0 1px #b8b8b8;
+	box-shadow: 0 0 0 1px #b8b8b8;
 }
 
 .v-ie8 .v-table-header table, .v-ie8 .v-table-footer table, .v-ie8 .v-table-table {
-	outline: 1px solid #d4d4d4;
+	outline: 1px solid #b8b8b8;
 }
 
 .v-table-header-wrap, .v-table-footer-wrap, .v-table-header-drag {
-	border: 1px solid #d4d4d4;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
+	border: 1px solid #b8b8b8;
+	background: #eee;
 	white-space: nowrap;
 	font-size: 14px;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -9177,7 +9026,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-table-footer td {
-	border-left: 1px solid #d4d4d4;
+	border-left: 1px solid #b8b8b8;
 }
 
 .v-table-footer-container, .v-table-caption-container {
@@ -9204,7 +9053,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 
 .v-table-caption-container, .v-table-header-drag {
 	padding: 12px 12px 11px;
-	border-left: 1px solid #d4d4d4;
+	border-left: 1px solid #b8b8b8;
 }
 
 .v-table-caption-container-align-right {
@@ -9223,7 +9072,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-table-cell-content {
-	border-left: 1px solid #d4d4d4;
+	border-left: 1px solid #b8b8b8;
 	overflow: hidden;
 	height: 37px;
 	vertical-align: middle;
@@ -9261,7 +9110,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-table-body {
-	border: 1px solid #d4d4d4;
+	border: 1px solid #b8b8b8;
 	-webkit-user-select: text;
 	-moz-user-select: text;
 	-ms-user-select: text;
@@ -9269,12 +9118,12 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-table-table {
-	background-color: white;
+	background-color: #f3f3f3;
 	white-space: nowrap;
 }
 
 .v-table-table td {
-	border-top: 1px solid #d4d4d4;
+	border-top: 1px solid #b8b8b8;
 }
 
 .v-table-table tr:first-child > td {
@@ -9282,12 +9131,12 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-table-row {
-	background-color: white;
+	background-color: #f3f3f3;
 	cursor: pointer;
 }
 
 .v-table-row-odd {
-	background-color: #f5f5f5;
+	background-color: #e9e9e9;
 	cursor: pointer;
 }
 
@@ -9296,20 +9145,18 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-table [class*="-row"].v-selected {
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	background-origin: border-box;
 	color: #ecf2f8;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
 }
 
 .v-table [class*="-row"].v-selected  + .v-selected {
-	background: #166ed5;
+	background: #197de1;
 }
 
 .v-table [class*="-row"].v-selected  + .v-selected td {
-	border-top-color: #166ed5;
+	border-top-color: #197de1;
 }
 
 .v-table [class*="-row"].v-selected .v-table-cell-content {
@@ -9350,7 +9197,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-table-focus {
-	outline: 1px solid #197de1;
+	outline: 1px solid #0072C6;
 	outline-offset: -1px;
 }
 
@@ -9368,14 +9215,14 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-table-focus-slot-right {
-	border-right: 3px solid #197de1;
+	border-right: 3px solid #0072C6;
 	right: -2px;
 	margin-left: -11px !important;
 }
 
 .v-table-focus-slot-left {
 	float: left;
-	border-left: 3px solid #197de1;
+	border-left: 3px solid #0072C6;
 	left: -1px;
 	right: auto;
 	margin-left: 0 !important;
@@ -9384,21 +9231,16 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 
 .v-table-column-selector {
 	height: 37px;
-	padding: 0 16px;
-	color: #191919;
+	padding: 0 15px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7;
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 	position: absolute;
 	z-index: 2;
 	top: 0;
@@ -9409,7 +9251,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 	padding: 0;
 	border-top-width: 0;
 	border-right-width: 0;
-	border-radius: 0 0 0 4px;
+	border-radius: 0 0 0 0px;
 	cursor: pointer;
 	text-align: center;
 	opacity: 0;
@@ -9421,24 +9263,24 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 
 .v-table-column-selector:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-table-column-selector:hover:after {
-	background-color: rgba(186, 186, 186, 0.1);
+	background-color: rgba(174, 174, 174, 0.1);
 }
 
 .v-table-column-selector:focus:after {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-table-column-selector:active:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 .v-table-column-selector:after {
@@ -9452,7 +9294,7 @@ td.v-inline-datefield-calendarpanel-time .v-label {
 }
 
 .v-table-column-selector:active:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 .v-table-column-selector:before {
@@ -9499,11 +9341,11 @@ tbody.v-drag-element tr {
 	
 	-webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
+	border-radius: 0px;
 	overflow: hidden;
 	opacity: 0.5;
 	filter: alpha(opacity=50) ;
-	background: white;
+	background: #f3f3f3;
 }
 
 .v-table-body {
@@ -9526,13 +9368,13 @@ tbody.v-drag-element tr {
 }
 
 .v-table-drag .v-table-body {
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	border-color: #197de1;
+	-webkit-box-shadow: 0 0 0 2px rgba(0, 114, 198, 0.5);
+	box-shadow: 0 0 0 2px rgba(0, 114, 198, 0.5);
+	border-color: #0072C6;
 }
 
 .v-ie8 .v-table-drag .v-table-body {
-	border-color: #197de1;
+	border-color: #0072C6;
 }
 
 .v-table-drag .v-table-body .v-table-focus {
@@ -9540,12 +9382,12 @@ tbody.v-drag-element tr {
 }
 
 .v-table-row-drag-middle .v-table-cell-content {
-	background-color: #d1e5f9;
-	color: #214060;
+	background-color: #c2d9ea;
+	color: #293f4f;
 }
 
 .v-table-row-drag-bottom td.v-table-cell-content {
-	border-bottom: 2px solid #197de1;
+	border-bottom: 2px solid #0072C6;
 	height: 35px;
 }
 
@@ -9554,7 +9396,7 @@ tbody.v-drag-element tr {
 }
 
 .v-table-row-drag-top td.v-table-cell-content {
-	border-top: 2px solid #197de1;
+	border-top: 2px solid #0072C6;
 	height: 36px;
 }
 
@@ -9593,11 +9435,11 @@ tbody.v-drag-element tr {
 }
 
 .v-table-borderless .v-table-header-wrap {
-	border-bottom: 1px solid #d9d9d9;
+	border-bottom: 1px solid #bfbfbf;
 }
 
 .v-table-borderless .v-table-footer-wrap {
-	border-top: 1px solid #d9d9d9;
+	border-top: 1px solid #bfbfbf;
 }
 
 .v-table-compact .v-table-header-wrap, .v-table-compact .v-table-footer-wrap, .v-table-compact .v-table-header-drag, .v-table-small .v-table-header-wrap, .v-table-small .v-table-footer-wrap, .v-table-small .v-table-header-drag {
@@ -9753,49 +9595,42 @@ tbody.v-drag-element tr {
 
 .v-splitpanel-horizontal  > div > .v-splitpanel-hsplitter div:before {
 	height: 37px;
-	padding: 0 16px;
-	color: #191919;
+	padding: 0 15px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, none;
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, none;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 	height: auto;
 	padding: 0;
 	border-radius: 0;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(left, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to right,#fafafa 2%, #efefef 98%);
+	background: #eee;
 }
 
 .v-splitpanel-horizontal  > div > .v-splitpanel-hsplitter div:before:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-splitpanel-horizontal  > div > .v-splitpanel-hsplitter div:before:hover:after {
-	background-color: rgba(186, 186, 186, 0.1);
+	background-color: rgba(174, 174, 174, 0.1);
 }
 
 .v-splitpanel-horizontal  > div > .v-splitpanel-hsplitter div:before:focus:after {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-splitpanel-horizontal  > div > .v-splitpanel-hsplitter div:before:active:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 .v-splitpanel-horizontal  > div > .v-splitpanel-second-container {
@@ -9813,21 +9648,16 @@ tbody.v-drag-element tr {
 
 .v-splitpanel-vertical  > div > .v-splitpanel-vsplitter div:before {
 	height: 37px;
-	padding: 0 16px;
-	color: #191919;
+	padding: 0 15px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, none;
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, none;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 	height: auto;
 	padding: 0;
 	border-radius: 0;
@@ -9835,24 +9665,24 @@ tbody.v-drag-element tr {
 
 .v-splitpanel-vertical  > div > .v-splitpanel-vsplitter div:before:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-splitpanel-vertical  > div > .v-splitpanel-vsplitter div:before:hover:after {
-	background-color: rgba(186, 186, 186, 0.1);
+	background-color: rgba(174, 174, 174, 0.1);
 }
 
 .v-splitpanel-vertical  > div > .v-splitpanel-vsplitter div:before:focus:after {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-splitpanel-vertical  > div > .v-splitpanel-vsplitter div:before:active:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 .v-splitpanel-horizontal.large  > div > .v-splitpanel-hsplitter {
@@ -9866,62 +9696,55 @@ tbody.v-drag-element tr {
 
 .v-splitpanel-horizontal.large  > div > .v-splitpanel-hsplitter div:before {
 	height: 37px;
-	padding: 0 16px;
-	color: #191919;
+	padding: 0 15px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, none;
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, none;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 	height: auto;
 	padding: 0;
 	border-radius: 0;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(left, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to right,#fafafa 2%, #efefef 98%);
+	background: #eee;
 }
 
 .v-splitpanel-horizontal.large  > div > .v-splitpanel-hsplitter div:before:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-splitpanel-horizontal.large  > div > .v-splitpanel-hsplitter div:before:hover:after {
-	background-color: rgba(186, 186, 186, 0.1);
+	background-color: rgba(174, 174, 174, 0.1);
 }
 
 .v-splitpanel-horizontal.large  > div > .v-splitpanel-hsplitter div:before:focus:after {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-splitpanel-horizontal.large  > div > .v-splitpanel-hsplitter div:before:active:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 .v-splitpanel-horizontal.large  > div > .v-splitpanel-hsplitter div:after {
 	content: "";
-	border: 1px solid #dadada;
-	border-top-color: #bababa;
-	border-left-color: #bababa;
+	border: 0 solid #c3c3c3;
+	border-top-color: #989898;
+	border-left-color: #989898;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	width: 0;
 	height: 37px;
-	margin-left: -1px;
+	margin-left: 0;
 	margin-top: -19px;
 }
 
@@ -9940,21 +9763,16 @@ tbody.v-drag-element tr {
 
 .v-splitpanel-vertical.large  > div > .v-splitpanel-vsplitter div:before {
 	height: 37px;
-	padding: 0 16px;
-	color: #191919;
+	padding: 0 15px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, none;
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, none;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 	height: auto;
 	padding: 0;
 	border-radius: 0;
@@ -9962,46 +9780,44 @@ tbody.v-drag-element tr {
 
 .v-splitpanel-vertical.large  > div > .v-splitpanel-vsplitter div:before:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-splitpanel-vertical.large  > div > .v-splitpanel-vsplitter div:before:hover:after {
-	background-color: rgba(186, 186, 186, 0.1);
+	background-color: rgba(174, 174, 174, 0.1);
 }
 
 .v-splitpanel-vertical.large  > div > .v-splitpanel-vsplitter div:before:focus:after {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-splitpanel-vertical.large  > div > .v-splitpanel-vsplitter div:before:active:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 .v-splitpanel-vertical.large  > div > .v-splitpanel-vsplitter div:after {
 	content: "";
-	border: 1px solid #dadada;
-	border-top-color: #bababa;
-	border-left-color: #bababa;
+	border: 0 solid #c3c3c3;
+	border-top-color: #989898;
+	border-left-color: #989898;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	width: 37px;
 	height: 0;
 	margin-left: -19px;
-	margin-top: -1px;
+	margin-top: 0;
 }
 
 .v-progressbar-wrapper {
 	border-radius: 4px;
 	height: 9px;
-	background-color: #d4d4d4;
-	background-image: -webkit-linear-gradient(bottom, #d7d7d7 2%, #c7c7c7 98%);
-	background-image: linear-gradient(to top,#d7d7d7 2%, #c7c7c7 98%);
+	background: #cacaca;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -10011,17 +9827,15 @@ tbody.v-drag-element tr {
 .v-progressbar-indicator {
 	border-radius: 4px;
 	height: inherit;
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	
 	
-	border: 1px solid #1362b1;
+	border: 0 solid #11579d;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	max-width: 100%;
-	min-width: 8px;
+	min-width: 3px;
 	-webkit-transition: width 160ms;
 	-moz-transition: width 160ms;
 	transition: width 160ms;
@@ -10041,12 +9855,10 @@ tbody.v-drag-element tr {
 	display: inline-block;
 	border-radius: 4px;
 	height: inherit;
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	
 	
-	border: 1px solid #1362b1;
+	border: 0 solid #11579d;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -10061,9 +9873,9 @@ tbody.v-drag-element tr {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	border: 2px solid rgba(25, 125, 225, 0.2);
-	border-top-color: #197de1;
-	border-right-color: #197de1;
+	border: 2px solid rgba(0, 114, 198, 0.2);
+	border-top-color: #0072C6;
+	border-right-color: #0072C6;
 	border-radius: 100%;
 	-webkit-animation: v-rotate-360 500ms infinite linear;
 	-moz-animation: v-rotate-360 500ms infinite linear;
@@ -10073,7 +9885,7 @@ tbody.v-drag-element tr {
 
 .v-ie8 .v-progressbar-indeterminate, .v-ie9 .v-progressbar-indeterminate {
 	border: none;
-	border-radius: 4px;
+	border-radius: 0px;
 	background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50% 50%;
 	background-size: 80%;
 }
@@ -10111,9 +9923,7 @@ tbody.v-drag-element tr {
 .v-slider-base {
 	border-radius: 4px;
 	height: 9px;
-	background-color: #d4d4d4;
-	background-image: -webkit-linear-gradient(bottom, #d7d7d7 2%, #c7c7c7 98%);
-	background-image: linear-gradient(to top,#d7d7d7 2%, #c7c7c7 98%);
+	background: #cacaca;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -10131,20 +9941,18 @@ tbody.v-drag-element tr {
 	top: 16px;
 	bottom: 16px;
 	left: 11px;
-	width: 8px;
-	border-radius: 4px;
-	border-left: 1px solid #1362b1;
+	width: 0px;
+	border-radius: 0px;
+	border-left: 0 solid #11579d;
 }
 
 .v-slider-base:after {
 	border-radius: 4px;
 	height: inherit;
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	
 	
-	border: 1px solid #1362b1;
+	border: 0 solid #11579d;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -10174,50 +9982,45 @@ tbody.v-drag-element tr {
 
 .v-slider-handle:before {
 	height: 37px;
-	padding: 0 16px;
-	color: #191919;
+	padding: 0 15px;
+	color: #181818;
 	font-weight: 400;
 	
 	
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
-	border-top-color: #c5c5c5;
-	border-bottom-color: #bcbcbc;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7, 0 2px 3px rgba(0, 0, 0, 0.05);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	
+	
 }
 
 .v-slider-handle:before:after {
 	border: inherit;
-	top: -1px;
-	right: -1px;
-	bottom: -1px;
-	left: -1px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .v-slider-handle:before:hover:after {
-	background-color: rgba(186, 186, 186, 0.1);
+	background-color: rgba(174, 174, 174, 0.1);
 }
 
 .v-slider-handle:before:focus:after {
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-slider-handle:before:active:after {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 .v-slider-handle:after {
-	border: 1px solid #c5c5c5;
-	border-color: #197de1;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	border: 0 solid #a6a6a6;
+	border-color: #0072C6;
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 	opacity: 0;
 	-webkit-transition: opacity 200ms;
 	-moz-transition: opacity 200ms;
@@ -10262,9 +10065,7 @@ tbody.v-drag-element tr {
 }
 
 .v-slider-vertical .v-slider-base {
-	background-color: #d4d4d4;
-	background-image: -webkit-linear-gradient(right, #d7d7d7 2%, #c7c7c7 98%);
-	background-image: linear-gradient(to left,#d7d7d7 2%, #c7c7c7 98%);
+	background: #cacaca;
 	width: 6px;
 	height: 100% !important;
 	min-width: 0;
@@ -10277,17 +10078,15 @@ tbody.v-drag-element tr {
 	left: 16px;
 	right: 16px;
 	width: auto;
-	height: 8px;
+	height: 0px;
 	border-left: none;
-	border-bottom: 1px solid #1362b1;
+	border-bottom: 0 solid #11579d;
 }
 
 .v-slider-vertical .v-slider-base:after {
 	height: 101%;
 	margin-left: 0;
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(left, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to right,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 }
 
 .v-ie8 .v-slider-vertical .v-slider-base:after {
@@ -10333,7 +10132,7 @@ tbody.v-drag-element tr {
 	content: "";
 	position: absolute;
 	height: 0;
-	border-top: 1px solid #dfdfdf;
+	border-top: 1px solid #d8d8d8;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -10363,7 +10162,7 @@ tbody.v-drag-element tr {
 	line-height: 37px;
 	font-size: 15px;
 	font-weight: 300;
-	color: #696969;
+	color: #6b6b6b;
 	width: auto !important;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -10427,8 +10226,8 @@ tbody.v-drag-element tr {
 	line-height: 18px;
 	width: 18px;
 	text-align: center;
-	border-radius: 2px;
-	color: #969696;
+	border-radius: 0px;
+	color: #999999;
 }
 
 .v-tabsheet-tabitemcell .v-tabsheet-caption-close:hover {
@@ -10448,30 +10247,30 @@ tbody.v-drag-element tr {
 	bottom: 0;
 	padding-left: 19px;
 	background-color: transparent;
-	background-image: -webkit-linear-gradient(right, #fafafa 70%, rgba(250, 250, 250, 0) 100%);
-	background-image: linear-gradient(to left,#fafafa 70%, rgba(250, 250, 250, 0) 100%);
+	background-image: -webkit-linear-gradient(right, #eee 70%, rgba(238, 238, 238, 0) 100%);
+	background-image: linear-gradient(to left,#eee 70%, rgba(238, 238, 238, 0) 100%);
 	pointer-events: none;
 }
 
 .v-tabsheet-scroller:after {
 	content: "";
-	height: 1px;
+	height: 0;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	display: block;
 	background-color: transparent;
-	background-image: -webkit-linear-gradient(right, #dfdfdf 70%, rgba(223, 223, 223, 0) 100%);
-	background-image: linear-gradient(to left,#dfdfdf 70%, rgba(223, 223, 223, 0) 100%);
+	background-image: -webkit-linear-gradient(right, #cacaca 70%, rgba(202, 202, 202, 0) 100%);
+	background-image: linear-gradient(to left,#cacaca 70%, rgba(202, 202, 202, 0) 100%);
 }
 
 .v-ie8 .v-tabsheet-scroller, .v-ie9 .v-tabsheet-scroller {
-	background-color: #fafafa;
+	background-color: #eee;
 }
 
 .v-ie8 .v-tabsheet-scroller:after, .v-ie9 .v-tabsheet-scroller:after {
-	background-color: #dfdfdf;
+	background-color: #cacaca;
 }
 
 .v-tabsheet-scroller button {
@@ -10548,9 +10347,9 @@ tbody.v-drag-element tr {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	border: 2px solid rgba(25, 125, 225, 0.2);
-	border-top-color: #197de1;
-	border-right-color: #197de1;
+	border: 2px solid rgba(0, 114, 198, 0.2);
+	border-top-color: #0072C6;
+	border-right-color: #0072C6;
 	border-radius: 100%;
 	-webkit-animation: v-rotate-360 500ms infinite linear;
 	-moz-animation: v-rotate-360 500ms infinite linear;
@@ -10567,7 +10366,7 @@ tbody.v-drag-element tr {
 
 .v-ie8 .v-tabsheet-deco, .v-ie9 .v-tabsheet-deco {
 	border: none;
-	border-radius: 4px;
+	border-radius: 0px;
 	background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50% 50%;
 	background-size: 80%;
 }
@@ -10602,10 +10401,10 @@ tbody.v-drag-element tr {
 .v-tabsheet-framed  > .v-tabsheet-tabcontainer .v-caption {
 	margin-left: 4px;
 	padding: 0 12px;
-	background-color: #fafafa;
-	border: 1px solid transparent;
-	line-height: 36px;
-	border-radius: 4px 4px 0 0;
+	background-color: #fff;
+	border: 0 solid transparent;
+	line-height: 37px;
+	border-radius: 0px 0px 0 0;
 	font-weight: 400;
 	-webkit-transition: background-color 160ms;
 	-moz-transition: background-color 160ms;
@@ -10613,12 +10412,12 @@ tbody.v-drag-element tr {
 }
 
 .v-tabsheet-framed  > .v-tabsheet-tabcontainer .v-caption:hover {
-	background-color: #f2f2f2;
-	border-bottom-color: #dfdfdf;
+	background-color: #f7f7f7;
+	border-bottom-color: #d8d8d8;
 }
 
 .v-tabsheet-framed  > .v-tabsheet-tabcontainer .v-caption.v-disabled:hover {
-	background-color: #fafafa;
+	background-color: #fff;
 }
 
 .v-tabsheet-framed  > .v-tabsheet-tabcontainer .v-caption-closable {
@@ -10636,18 +10435,18 @@ tbody.v-drag-element tr {
 }
 
 .v-tabsheet-framed  > .v-tabsheet-tabcontainer .v-tabsheet-tabitem .v-caption {
-	border-color: #dfdfdf;
+	border-color: #d8d8d8;
 }
 
 .v-tabsheet-framed  > .v-tabsheet-tabcontainer .v-tabsheet-tabitem-selected .v-caption {
 	background: white;
-	border-color: #dfdfdf;
+	border-color: #d8d8d8;
 	border-bottom: none;
-	padding-bottom: 1px;
+	padding-bottom: 0;
 }
 
 .v-tabsheet-framed  > .v-tabsheet-content {
-	border: 1px solid #dfdfdf;
+	border: 0 solid #d8d8d8;
 	border-top: none;
 }
 
@@ -10656,14 +10455,14 @@ tbody.v-drag-element tr {
 }
 
 .v-tabsheet-framed.padded-tabbar  > .v-tabsheet-tabcontainer {
-	border: 1px solid #dfdfdf;
+	border: 0 solid #d8d8d8;
 	border-bottom: none;
-	background: #fafafa;
+	background: #eee;
 	padding-top: 6px;
 }
 
 .v-tabsheet-framed.icons-on-top  > .v-tabsheet-tabcontainer .v-tabsheet-tabitem-selected .v-caption {
-	padding-bottom: 7px;
+	padding-bottom: 6px;
 }
 
 .v-tabsheet-centered-tabs  > .v-tabsheet-tabcontainer {
@@ -10794,8 +10593,8 @@ tbody.v-drag-element tr {
 .v-colorpicker-popup .v-horizontallayout {
 	height: auto !important;
 	padding: 9px 0;
-	background-color: #fafafa;
-	border-top: 1px solid #ededed;
+	background-color: #eee;
+	border-top: 0 solid #e2e2e2;
 }
 
 .v-colorpicker-popup .v-horizontallayout .v-expand {
@@ -10828,7 +10627,7 @@ tbody.v-drag-element tr {
 	right: 6px;
 	bottom: 6px;
 	left: 6px;
-	border-radius: 3px;
+	border-radius: -1px;
 	border: 1px solid rgba(0, 0, 0, 0.5);
 	max-width: 23px;
 }
@@ -10857,10 +10656,10 @@ tbody.v-drag-element tr {
 .v-panel {
 	background: white;
 	color: #474747;
-	border-radius: 4px;
-	border: 1px solid #d5d5d5;
-	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-radius: 0px;
+	border: 2px solid #c9c9c9;
+	
+	
 	overflow: visible !important;
 }
 
@@ -10869,18 +10668,18 @@ tbody.v-drag-element tr {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0 12px;
-	line-height: 36px;
-	border-bottom: 1px solid #d5d5d5;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #f6f6f6 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #f6f6f6 98%);
-	color: #464646;
+	line-height: 37px;
+	border-bottom: 2px solid #bcbcbc;
+	background-color: #eee;
+	background-image: -webkit-linear-gradient(top, #eee 0%, #eee 100%);
+	background-image: linear-gradient(to bottom,#eee 0%, #eee 100%);
+	color: #434343;
 	font-weight: 400;
 	font-size: 14px;
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #eeeeee;
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #eeeeee;
+	
+	
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-	border-radius: 3px 3px 0 0;
+	border-radius: 0px 0px 0 0;
 }
 
 .v-panel-content {
@@ -10927,12 +10726,12 @@ tbody.v-drag-element tr {
 }
 
 .v-panel-well {
-	background: #f5f5f5;
-	color: #454545;
-	-webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset 0 2px 3px rgba(0, 0, 0, 0.05);
-	border-radius: 4px;
-	border: 1px solid #c5c5c5;
+	background: #e9e9e9;
+	color: #414141;
+	-webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset false;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05), inset false;
+	border-radius: 0px;
+	border: 0 solid #a6a6a6;
 }
 
 .v-panel-well  > div > [class*="-caption"] {
@@ -10949,12 +10748,12 @@ tbody.v-drag-element tr {
 .v-panel-scroll-divider  > [class*="-captionwrap"]:after {
 	content: "";
 	position: absolute;
-	bottom: -1px;
+	bottom: -2px;
 	right: 0;
 	left: 0;
 	height: 0;
-	border-top: 1px solid #dfdfdf;
-	border-color: rgba(197, 197, 197, 0.5);
+	border-top: 2px solid #d8d8d8;
+	border-color: rgba(178, 178, 178, 0.5);
 }
 
 .v-panel-scroll-divider  > [class*="-content"]:before {
@@ -10963,7 +10762,7 @@ tbody.v-drag-element tr {
 	z-index: 2;
 	top: 0;
 	height: 0;
-	border-top: 1px solid #fafafa;
+	border-top: 2px solid #fff;
 	left: 0;
 	right: 0;
 }
@@ -10984,32 +10783,18 @@ tbody.v-drag-element tr {
 .v-accordion {
 	background: white;
 	color: #474747;
-	border-radius: 4px;
-	border: 1px solid #d5d5d5;
-	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #f4f4f4 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #f4f4f4 98%);
+	border-radius: 0px;
+	border: 2px solid #c9c9c9;
+	
+	
+	background-color: #eee;
+	background-image: -webkit-linear-gradient(top, #eee 0%, #eee 100%);
+	background-image: linear-gradient(to bottom,#eee 0%, #eee 100%);
 	overflow: hidden;
 }
 
 .v-accordion-item {
 	position: relative;
-}
-
-.v-accordion-item:first-child {
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-}
-
-.v-accordion-item:last-child {
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
-}
-
-.v-accordion-item:last-child [class*="item-content"] {
-	border-radius: inherit;
 }
 
 .v-accordion-item[class*="item-open"]:last-child > div > .v-caption {
@@ -11022,7 +10807,7 @@ tbody.v-drag-element tr {
 }
 
 .v-accordion-item[class*="item-open"] + [class*="item"] {
-	border-top: 1px solid #d9d9d9;
+	border-top: 2px solid #c9c9c9;
 }
 
 .v-accordion-item-caption {
@@ -11034,20 +10819,20 @@ tbody.v-drag-element tr {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0 12px;
-	line-height: 36px;
-	border-bottom: 1px solid #d5d5d5;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #f6f6f6 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #f6f6f6 98%);
-	color: #464646;
+	line-height: 37px;
+	border-bottom: 2px solid #bcbcbc;
+	background-color: #eee;
+	background-image: -webkit-linear-gradient(top, #eee 0%, #eee 100%);
+	background-image: linear-gradient(to bottom,#eee 0%, #eee 100%);
+	color: #434343;
 	font-weight: 400;
 	font-size: 14px;
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #eeeeee;
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #eeeeee;
+	
+	
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
 	display: block;
 	background: transparent;
-	border-bottom-color: #c9c9c9;
+	border-bottom-color: #b2b2b2;
 	border-radius: inherit;
 	cursor: pointer;
 	position: relative;
@@ -11064,17 +10849,17 @@ tbody.v-drag-element tr {
 }
 
 .v-accordion-item-caption  > .v-caption:hover:before {
-	background-color: rgba(186, 186, 186, 0.1);
+	background-color: rgba(174, 174, 174, 0.1);
 	border: none;
 }
 
 .v-accordion-item-caption  > .v-caption:active:before {
-	background-color: rgba(125, 125, 125, 0.2);
+	background-color: rgba(119, 119, 119, 0.2);
 }
 
 .v-accordion-item-content {
-	-webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.05);
+	-webkit-box-shadow: inset false;
+	box-shadow: inset false;
 	background-color: white;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -11113,17 +10898,15 @@ tbody.v-drag-element tr {
 }
 
 .v-select-twincol select {
-	border: 1px solid #c5c5c5;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	color: #464646;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	color: #434343;
 }
 
 .v-select-twincol select:focus {
 	outline: none;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-select-twincol .v-textfield, .v-select-twincol .v-nativebutton {
@@ -11139,7 +10922,6 @@ tbody.v-drag-element tr {
 	font-size: 14px;
 	font-weight: 400;
 	padding-bottom: 0.3em;
-	padding-left: 1px;
 }
 
 .v-select-twincol-buttons {
@@ -11161,7 +10943,7 @@ tbody.v-drag-element tr {
 	position: absolute;
 	left: 9px;
 	right: 9px;
-	top: 36px;
+	top: 37px;
 	padding: 0;
 	text-align: center;
 }
@@ -11178,14 +10960,6 @@ tbody.v-drag-element tr {
 	z-index: 1;
 }
 
-.v-select-twincol-buttons .v-button:first-child {
-	border-radius: 4px 4px 0 0;
-}
-
-.v-select-twincol-buttons .v-button:last-child {
-	border-radius: 0 0 4px 4px;
-}
-
 .v-select-twincol-buttons .v-button-wrap:before {
 	font-family: ThemeIcons;
 	content: "\f053";
@@ -11197,17 +10971,15 @@ tbody.v-drag-element tr {
 }
 
 .v-select select {
-	border: 1px solid #c5c5c5;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	color: #464646;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	color: #434343;
 }
 
 .v-select select:focus {
 	outline: none;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-select-select {
@@ -11314,7 +11086,7 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar-bottom-spacer:hover {
-	color: #197de1;
+	color: #0072C6;
 }
 
 .v-calendar-day-number {
@@ -11323,29 +11095,29 @@ tbody.v-drag-element tr {
 	text-align: right;
 	margin: 0 5px;
 	white-space: nowrap;
-	border-top: 1px solid #f2f2f2;
+	border-top: 1px solid #e6e6e6;
 	cursor: pointer;
 }
 
 .v-calendar-day-number:hover {
-	color: #197de1;
+	color: #0072C6;
 }
 
 .v-calendar-month-day-today {
-	background: #eef3f8;
+	background: #e2e7eb;
 }
 
 .v-calendar-month-day-today .v-calendar-day-number {
 	font-weight: 400;
-	color: #197de1;
-	border-top: 2px solid #197de1;
+	color: #0072C6;
+	border-top: 2px solid #0072C6;
 	line-height: 24px;
 	margin: 0;
 	padding: 0 5px;
 }
 
 .v-calendar-month-day-selected {
-	background-color: #e3edf7;
+	background-color: #d8e2ec;
 }
 
 .v-calendar-month-day-dragemphasis {
@@ -11358,7 +11130,7 @@ tbody.v-drag-element tr {
 
 .v-calendar-weekly-longevents {
 	margin-left: 50px;
-	border-bottom: 3px solid #e0e0e0;
+	border-bottom: 3px solid #d5d5d5;
 }
 
 .v-calendar-weekly-longevents .v-calendar-event-all-day {
@@ -11399,7 +11171,7 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar .v-datecellslot, .v-calendar .v-datecellslot-even {
-	border-top: 1px solid #dfdfdf;
+	border-top: 1px solid #d8d8d8;
 }
 
 .v-calendar .v-datecellslot:first-child, .v-calendar .v-datecellslot-even:first-child {
@@ -11415,7 +11187,7 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar-current-time {
-	background: #197de1;
+	background: #0072C6;
 	line-height: 1px;
 	pointer-events: none;
 	opacity: 0.5;
@@ -11424,7 +11196,7 @@ tbody.v-drag-element tr {
 
 .v-calendar-current-time:before {
 	content: "\2022";
-	color: #197de1;
+	color: #0072C6;
 	font-size: 22px;
 	margin-left: -0.07em;
 }
@@ -11443,15 +11215,10 @@ tbody.v-drag-element tr {
 	background: #197de1;
 	opacity: 0.5;
 	filter: alpha(opacity=50) ;
-	border-radius: 4px 4px 0 0;
 }
 
 .v-calendar .v-daterange  + .v-daterange {
 	border-color: transparent;
-}
-
-.v-calendar .v-daterange  + .v-daterange:before {
-	border-radius: 0;
 }
 
 .v-calendar-event {
@@ -11459,7 +11226,7 @@ tbody.v-drag-element tr {
 	overflow: hidden;
 	cursor: pointer;
 	outline: none;
-	border-radius: 4px;
+	border-radius: 0px;
 }
 
 .v-calendar-event:focus {
@@ -11517,18 +11284,6 @@ tbody.v-drag-element tr {
 	text-overflow: ellipsis;
 }
 
-.v-calendar-event-start {
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
-	margin-left: 5px;
-}
-
-.v-calendar-event-end {
-	border-top-right-radius: 4px;
-	border-bottom-right-radius: 4px;
-	margin-right: 5px;
-}
-
 .v-calendar-event-caption {
 	font-weight: 500;
 	line-height: 1.2;
@@ -11552,8 +11307,8 @@ tbody.v-drag-element tr {
 
 .v-calendar-week-wrapper .v-calendar-event-content {
 	margin-top: -1px;
-	border-radius: 5px;
-	border: 1px solid #fafafa;
+	border-radius: 1px;
+	border: 1px solid #fff;
 	padding-top: 3px;
 	margin-right: 5px;
 }
@@ -11563,8 +11318,8 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar-event-all-day {
-	background-color: #c8eaf4;
-	background-color: rgba(200, 234, 244, 0.8);
+	background-color: #bee0eb;
+	background-color: rgba(190, 224, 235, 0.8);
 	color: #00ace0;
 }
 
@@ -11573,8 +11328,8 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar-week-wrapper .v-calendar-event .v-calendar-event-content {
-	background-color: #c8eaf4;
-	background-color: rgba(200, 234, 244, 0.8);
+	background-color: #bee0eb;
+	background-color: rgba(190, 224, 235, 0.8);
 }
 
 .v-calendar-event-month[class*="color2"]:before {
@@ -11582,8 +11337,8 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar-event-all-day[class*="color2"] {
-	background-color: #d1e7cd;
-	background-color: rgba(209, 231, 205, 0.8);
+	background-color: #c7dec3;
+	background-color: rgba(199, 222, 195, 0.8);
 	color: #2d9f19;
 }
 
@@ -11592,8 +11347,8 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar-week-wrapper .v-calendar-event[class*="color2"] .v-calendar-event-content {
-	background-color: #d1e7cd;
-	background-color: rgba(209, 231, 205, 0.8);
+	background-color: #c7dec3;
+	background-color: rgba(199, 222, 195, 0.8);
 }
 
 .v-calendar-event-month[class*="color3"]:before {
@@ -11601,8 +11356,8 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar-event-all-day[class*="color3"] {
-	background-color: #f1e1c8;
-	background-color: rgba(241, 225, 200, 0.8);
+	background-color: #e8d8be;
+	background-color: rgba(232, 216, 190, 0.8);
 	color: #d18100;
 }
 
@@ -11611,8 +11366,8 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar-week-wrapper .v-calendar-event[class*="color3"] .v-calendar-event-content {
-	background-color: #f1e1c8;
-	background-color: rgba(241, 225, 200, 0.8);
+	background-color: #e8d8be;
+	background-color: rgba(232, 216, 190, 0.8);
 }
 
 .v-calendar-event-month[class*="color4"]:before {
@@ -11620,8 +11375,8 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar-event-all-day[class*="color4"] {
-	background-color: #f1d3cb;
-	background-color: rgba(241, 211, 203, 0.8);
+	background-color: #e7c9c2;
+	background-color: rgba(231, 201, 194, 0.8);
 	color: #ce3812;
 }
 
@@ -11630,8 +11385,8 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar-week-wrapper .v-calendar-event[class*="color4"] .v-calendar-event-content {
-	background-color: #f1d3cb;
-	background-color: rgba(241, 211, 203, 0.8);
+	background-color: #e7c9c2;
+	background-color: rgba(231, 201, 194, 0.8);
 }
 
 .v-calendar-event-month[class*="color5"]:before {
@@ -11639,8 +11394,8 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar-event-all-day[class*="color5"] {
-	background-color: #d1d9f1;
-	background-color: rgba(209, 217, 241, 0.8);
+	background-color: #c7cfe7;
+	background-color: rgba(199, 207, 231, 0.8);
 	color: #2d55cd;
 }
 
@@ -11649,8 +11404,8 @@ tbody.v-drag-element tr {
 }
 
 .v-calendar-week-wrapper .v-calendar-event[class*="color5"] .v-calendar-event-content {
-	background-color: #d1d9f1;
-	background-color: rgba(209, 217, 241, 0.8);
+	background-color: #c7cfe7;
+	background-color: rgba(199, 207, 231, 0.8);
 }
 
 .v-calendar.v-disabled * {
@@ -11702,7 +11457,7 @@ h4, .v-label-h4 {
 	line-height: 1.1;
 	font-weight: 500;
 	font-size: 14px;
-	color: #414141;
+	color: #424242;
 	text-transform: uppercase;
 	letter-spacing: 0;
 	margin-top: 2.4em;
@@ -11751,7 +11506,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 
 .v-label-light {
 	font-weight: 200;
-	color: #7d7d7d;
+	color: gray;
 }
 
 .v-label-align-right {
@@ -11768,9 +11523,9 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	border: 2px solid rgba(25, 125, 225, 0.2);
-	border-top-color: #197de1;
-	border-right-color: #197de1;
+	border: 2px solid rgba(0, 114, 198, 0.2);
+	border-top-color: #0072C6;
+	border-right-color: #0072C6;
 	border-radius: 100%;
 	-webkit-animation: v-rotate-360 500ms infinite linear;
 	-moz-animation: v-rotate-360 500ms infinite linear;
@@ -11780,7 +11535,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 
 .v-ie8 .v-label-spinner, .v-ie9 .v-label-spinner {
 	border: none;
-	border-radius: 4px;
+	border-radius: 0px;
 	background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50% 50%;
 	background-size: 80%;
 }
@@ -11794,7 +11549,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	background: white;
 	color: #474747;
 	border: 2px solid #2c9720;
-	border-radius: 4px;
+	border-radius: 0px;
 	padding: 7px 19px 7px 37px;
 	font-weight: 400;
 	font-size: 15px;
@@ -11834,7 +11589,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	right: -1px;
 	bottom: -1px;
 	left: -1px;
-	border: 0 solid #197de1;
+	border: 0 solid #0072C6;
 }
 
 .v-ddwrapper-over-top:before {
@@ -11859,10 +11614,10 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 
 .no-vertical-drag-hints .v-ddwrapper-over-top:after, .no-vertical-drag-hints.v-ddwrapper-over-top:after {
 	border-width: 2px;
-	border-radius: 4px;
+	border-radius: 0px;
 	opacity: 0.3;
 	filter: alpha(opacity=30.0) ;
-	background: #8abef2;
+	background: #63bdff;
 }
 
 .no-vertical-drag-hints .v-ddwrapper-over-bottom:before, .no-vertical-drag-hints.v-ddwrapper-over-bottom:before {
@@ -11871,10 +11626,10 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 
 .no-vertical-drag-hints .v-ddwrapper-over-bottom:after, .no-vertical-drag-hints.v-ddwrapper-over-bottom:after {
 	border-width: 2px;
-	border-radius: 4px;
+	border-radius: 0px;
 	opacity: 0.3;
 	filter: alpha(opacity=30.0) ;
-	background: #8abef2;
+	background: #63bdff;
 }
 
 .no-horizontal-drag-hints.v-ddwrapper-over-left:before, .no-horizontal-drag-hints .v-ddwrapper-over-left:before {
@@ -11883,10 +11638,10 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 
 .no-horizontal-drag-hints.v-ddwrapper-over-left:after, .no-horizontal-drag-hints .v-ddwrapper-over-left:after {
 	border-width: 2px;
-	border-radius: 4px;
+	border-radius: 0px;
 	opacity: 0.3;
 	filter: alpha(opacity=30.0) ;
-	background: #8abef2;
+	background: #63bdff;
 }
 
 .no-horizontal-drag-hints.v-ddwrapper-over-right:before, .no-horizontal-drag-hints .v-ddwrapper-over-right:before {
@@ -11895,18 +11650,18 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 
 .no-horizontal-drag-hints.v-ddwrapper-over-right:after, .no-horizontal-drag-hints .v-ddwrapper-over-right:after {
 	border-width: 2px;
-	border-radius: 4px;
+	border-radius: 0px;
 	opacity: 0.3;
 	filter: alpha(opacity=30.0) ;
-	background: #8abef2;
+	background: #63bdff;
 }
 
 .v-ddwrapper-over-middle:after, .v-ddwrapper-over-center:after {
 	border-width: 2px;
-	border-radius: 4px;
+	border-radius: 0px;
 	opacity: 0.3;
 	filter: alpha(opacity=30.0) ;
-	background: #8abef2;
+	background: #63bdff;
 }
 
 .no-box-drag-hints.v-ddwrapper:after, .no-box-drag-hints .v-ddwrapper:after {
@@ -11919,17 +11674,15 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .v-select select {
-	border: 1px solid #c5c5c5;
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	color: #464646;
+	border: 0 solid #a6a6a6;
+	background: #eee;
+	color: #434343;
 }
 
 .v-select select:focus {
 	outline: none;
-	-webkit-box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
-	box-shadow: 0 0 0 2px rgba(25, 125, 225, 0.5);
+	-webkit-box-shadow: 0 0 0 1px #0072C6;
+	box-shadow: 0 0 0 1px #0072C6;
 }
 
 .v-select-select {
@@ -11949,7 +11702,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 .v-popupview {
 	cursor: pointer;
 	color: #197de1;
-	text-decoration: underline;
+	text-decoration: none;
 	font-weight: inherit;
 	-webkit-transition: color 140ms;
 	-moz-transition: color 140ms;
@@ -11970,8 +11723,8 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	border-radius: 4px;
 	background-color: white;
 	color: #474747;
-	-webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.09098);
-	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.09098);
+	-webkit-box-shadow: 0 0 0 2px #000;
+	box-shadow: 0 0 0 2px #000;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
@@ -12013,9 +11766,9 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	border: 2px solid rgba(25, 125, 225, 0.2);
-	border-top-color: #197de1;
-	border-right-color: #197de1;
+	border: 2px solid rgba(0, 114, 198, 0.2);
+	border-top-color: #0072C6;
+	border-right-color: #0072C6;
 	border-radius: 100%;
 	-webkit-animation: v-rotate-360 500ms infinite linear;
 	-moz-animation: v-rotate-360 500ms infinite linear;
@@ -12025,7 +11778,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 
 .v-ie8 .v-popupview-loading, .v-ie9 .v-popupview-loading {
 	border: none;
-	border-radius: 4px;
+	border-radius: 0px;
 	background: #fff url(../valo/shared/img/spinner.gif) no-repeat 50% 50%;
 	background-size: 80%;
 }
@@ -12053,11 +11806,11 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	height: 37px;
 	border-radius: 4px;
 	padding: 0;
-	border: 1px solid #c5c5c5;
+	border: 1px solid #b2b2b2;
 	background: white;
 	color: #474747;
-	-webkit-box-shadow: inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
-	box-shadow: inset 0 1px 0 #f7f7f7, 0 1px 0 rgba(255, 255, 255, 0.1);
+	
+	
 	-webkit-transition: box-shadow 180ms, border 180ms;
 	-moz-transition: box-shadow 180ms, border 180ms;
 	transition: box-shadow 180ms, border 180ms;
@@ -12076,13 +11829,11 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .v-richtextarea .gwt-RichTextToolbar {
-	background-color: #fafafa;
-	background-image: -webkit-linear-gradient(top, #fafafa 2%, #efefef 98%);
-	background-image: linear-gradient(to bottom,#fafafa 2%, #efefef 98%);
-	-webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7;
-	box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e7e7e7;
-	border-bottom: 1px solid #c5c5c5;
-	color: #464646;
+	background: #eee;
+	
+	
+	border-bottom: 0 solid #a6a6a6;
+	color: #434343;
 }
 
 .v-richtextarea .gwt-ToggleButton, .v-richtextarea .gwt-PushButton {
@@ -12098,9 +11849,9 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .v-richtextarea .gwt-ToggleButton-down, .v-richtextarea .gwt-ToggleButton-down-hovering {
-	background-color: #e0e0e0;
-	background-image: -webkit-linear-gradient(bottom, #e0e0e0 2%, #dcdcdc 98%);
-	background-image: linear-gradient(to top,#e0e0e0 2%, #dcdcdc 98%);
+	background-color: #d5d5d5;
+	background-image: -webkit-linear-gradient(bottom, #d5d5d5 0%, #d5d5d5 100%);
+	background-image: linear-gradient(to top,#d5d5d5 0%, #d5d5d5 100%);
 }
 
 .v-richtextarea .gwt-RichTextToolbar-top img {
@@ -12281,7 +12032,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .v-Notification {
-	border-radius: 4px;
+	border-radius: 0px;
 	text-align: center;
 	position: fixed !important;
 	-webkit-backface-visibility: hidden;
@@ -12528,7 +12279,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	opacity: 0.5;
 	filter: alpha(opacity=50) ;
 	text-align: center;
-	border: 1px solid #000;
+	border: 0 solid #000;
 	border-color: rgba(0, 0, 0, 0.3);
 	border-radius: 50%;
 	-webkit-transition: opacity 200ms;
@@ -12602,13 +12353,13 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 
 .valo-menu {
 	height: 100%;
-	background-color: #4b4b4b;
-	background-image: -webkit-linear-gradient(right, #414141 0%, #4b4b4b 9px);
-	background-image: linear-gradient(to left,#414141 0%, #4b4b4b 9px);
-	color: #a5a5a5;
+	background-color: #005593;
+	background-image: -webkit-linear-gradient(right, #005593 0%, #005593 9px);
+	background-image: linear-gradient(to left,#005593 0%, #005593 9px);
+	color: #60afe8;
 	font-size: 14px;
 	line-height: 30px;
-	border-right: 1px solid #3b3b3b;
+	border-right: 0 solid #003b66;
 	white-space: nowrap;
 }
 
@@ -12622,7 +12373,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .valo-menu-part {
-	border-left: 1px solid #414141;
+	border-left: 0 solid #004578;
 	height: 100%;
 	padding-bottom: 37px;
 	overflow: auto;
@@ -12646,22 +12397,20 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 
 .valo-menu-title {
 	line-height: 1.2;
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	color: white;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
 	padding: 12px 19px;
 	font-size: 14px;
-	border-bottom: 1px solid #1362b1;
-	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-bottom: 0 solid #11579d;
+	
+	
 	text-align: center;
 }
 
 .valo-menu-title .v-menubar.v-menubar {
 	background: transparent;
-	border-color: #1362b1;
+	border-color: #11579d;
 	color: inherit;
 	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -12670,8 +12419,8 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 
 .valo-menu-title .v-menubar-menuitem {
 	background: transparent;
-	-webkit-box-shadow: inset 0 1px 0 #4d98e6, inset 0 -1px 0 #166bca;
-	box-shadow: inset 0 1px 0 #4d98e6, inset 0 -1px 0 #166bca;
+	
+	
 	text-shadow: inherit;
 	font-size: 16px;
 	border-color: inherit;
@@ -12686,7 +12435,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 .v-menubar-user-menu {
 	border: none;
 	border-radius: 0;
-	padding: 1px;
+	padding: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	text-shadow: none;
@@ -12709,7 +12458,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	box-shadow: none;
 	border: none;
 	margin-right: 1px;
-	border-radius: 4px;
+	border-radius: 0px;
 	color: #197de1;
 	padding: 0 12px;
 	-webkit-transition: color 140ms;
@@ -12718,7 +12467,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .v-menubar-user-menu .v-menubar-menuitem:first-child, .v-menubar-user-menu .v-menubar-menuitem:last-child, .v-menubar-user-menu .v-menubar-menuitem:first-child:last-child {
-	border-radius: 4px;
+	border-radius: 0px;
 }
 
 .v-menubar-user-menu .v-menubar-menuitem:before {
@@ -12734,13 +12483,13 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .v-menubar-user-menu .v-menubar-menuitem-checked, .v-menubar-user-menu .v-menubar-menuitem-checked:first-child {
-	border: 1px solid #c5c5c5;
+	border: 0 solid #a6a6a6;
 	color: #197de1;
 }
 
 .v-menubar-user-menu .v-menubar-menuitem-checked .v-menubar-menuitem-caption, .v-menubar-user-menu .v-menubar-menuitem-checked:first-child .v-menubar-menuitem-caption {
 	position: relative;
-	top: -1px;
+	top: 0;
 }
 
 .v-menubar-user-menu .v-menubar-menuitem-selected {
@@ -12766,11 +12515,11 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 .v-menubar-user-menu  > .v-menubar-menuitem img.v-icon {
 	width: 56px;
 	height: 56px;
-	border-radius: 29px;
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+	border-radius: 28px;
+	
 	display: block;
 	margin: 0 auto 0.3em;
-	border: 1px solid #c5c5c5;
+	border: 0 solid #a6a6a6;
 }
 
 .v-menubar-user-menu  > .v-menubar-menuitem:after {
@@ -12785,13 +12534,13 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .valo-menu-subtitle {
-	color: #868686;
+	color: #2095eb;
 	margin: 7px 0 7px 19px;
-	border-bottom: 1px solid #666666;
+	border-bottom: 0 solid #266ea3;
 }
 
 .valo-menu-subtitle [class*="badge"] {
-	color: #73a5d7;
+	color: #62a7e7;
 }
 
 .valo-menuitems {
@@ -12822,11 +12571,11 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .valo-menu-item [class*="badge"] {
-	color: #73a5d7;
+	color: #62a7e7;
 }
 
 .valo-menu-item.selected {
-	background: #434343;
+	background: #004c84;
 }
 
 .valo-menu-item.selected .v-icon {
@@ -12834,9 +12583,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .valo-menu-item.selected [class*="badge"] {
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	color: #c8dbed;
 }
 
@@ -12849,7 +12596,6 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	margin-right: 19px;
 	text-align: center;
 	vertical-align: middle;
-	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.75)));
 }
 
 .valo-menu-item span.v-icon  + span {
@@ -12857,7 +12603,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .valo-menu-item [class*="badge"] {
-	background-color: #585858;
+	background-color: #0063ad;
 	-webkit-transition: background-color 300ms;
 	-moz-transition: background-color 300ms;
 	transition: background-color 300ms;
@@ -12866,11 +12612,11 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	min-width: 11px;
 	text-align: center;
 	top: 4px;
-	border-radius: 4px;
+	border-radius: 0px;
 }
 
 .valo-menu-part.large-icons {
-	background-color: #4b4b4b;
+	background-color: #005593;
 	min-width: 74px;
 	max-width: 111px;
 }
@@ -12901,9 +12647,9 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	border: none;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	background: #3c3c3c;
+	background: #004374;
 	font-size: 13px;
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+	
 }
 
 .valo-menu-part.large-icons [class*="subtitle"] [class*="badge"] {
@@ -12920,7 +12666,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	line-height: 1;
 	padding: 12px;
 	text-align: center;
-	border-top: 1px solid #555555;
+	border-top: 0 solid #0f5f99;
 }
 
 .valo-menu-part.large-icons .valo-menu-item:first-child {
@@ -12945,7 +12691,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .valo-menu-part.large-icons .valo-menu-item.selected {
-	background: #434343;
+	background: #004c84;
 }
 
 .valo-menu-part.large-icons .valo-menu-item.selected .v-icon {
@@ -12953,7 +12699,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .valo-menu-part.large-icons .valo-menu-item.selected [class*="badge"] {
-	border-color: #434343;
+	border-color: #004c84;
 }
 
 .valo-menu-part.large-icons .valo-menu-item [class*="badge"] {
@@ -12961,7 +12707,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	padding-right: 4px;
 	top: 7px;
 	right: 7px;
-	border: 2px solid #4b4b4b;
+	border: 2px solid #005593;
 }
 
 .valo-menu-logo {
@@ -12969,17 +12715,15 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	overflow: hidden;
 	width: 44px !important;
 	height: 44px;
-	border-radius: 4px;
+	border-radius: 0px;
 	text-align: center;
-	background-color: #197de1;
-	background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
-	background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+	background: #197de1;
 	color: white;
 	font-size: 25px;
 	line-height: 44px;
 	margin: 19px auto;
-	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+	
+	
 }
 
 .valo-menu-logo:focus {
@@ -12987,7 +12731,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .valo-menu-responsive[width-range~="801px-1100px"] .valo-menu-part {
-	background-color: #4b4b4b;
+	background-color: #005593;
 	min-width: 74px;
 	max-width: 111px;
 }
@@ -13018,9 +12762,9 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	border: none;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	background: #3c3c3c;
+	background: #004374;
 	font-size: 13px;
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+	
 }
 
 .valo-menu-responsive[width-range~="801px-1100px"] .valo-menu-part [class*="subtitle"] [class*="badge"] {
@@ -13037,7 +12781,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	line-height: 1;
 	padding: 12px;
 	text-align: center;
-	border-top: 1px solid #555555;
+	border-top: 0 solid #0f5f99;
 }
 
 .valo-menu-responsive[width-range~="801px-1100px"] .valo-menu-part .valo-menu-item:first-child {
@@ -13062,7 +12806,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .valo-menu-responsive[width-range~="801px-1100px"] .valo-menu-part .valo-menu-item.selected {
-	background: #434343;
+	background: #004c84;
 }
 
 .valo-menu-responsive[width-range~="801px-1100px"] .valo-menu-part .valo-menu-item.selected .v-icon {
@@ -13070,7 +12814,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 }
 
 .valo-menu-responsive[width-range~="801px-1100px"] .valo-menu-part .valo-menu-item.selected [class*="badge"] {
-	border-color: #434343;
+	border-color: #004c84;
 }
 
 .valo-menu-responsive[width-range~="801px-1100px"] .valo-menu-part .valo-menu-item [class*="badge"] {
@@ -13078,7 +12822,7 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 	padding-right: 4px;
 	top: 7px;
 	right: 7px;
-	border: 2px solid #4b4b4b;
+	border: 2px solid #005593;
 }
 
 .valo-menu-responsive[width-range~="0-800px"] {
@@ -13148,13 +12892,13 @@ h1.no-margin, .v-label-h1.no-margin, h2.no-margin, .v-label-h2.no-margin, h3.no-
 
 .valo-menu-responsive[width-range~="0-800px"] .valo-menuitems {
 	height: 100%;
-	background-color: #4b4b4b;
-	background-image: -webkit-linear-gradient(right, #414141 0%, #4b4b4b 9px);
-	background-image: linear-gradient(to left,#414141 0%, #4b4b4b 9px);
-	color: #a5a5a5;
+	background-color: #005593;
+	background-image: -webkit-linear-gradient(right, #005593 0%, #005593 9px);
+	background-image: linear-gradient(to left,#005593 0%, #005593 9px);
+	color: #60afe8;
 	font-size: 14px;
 	line-height: 30px;
-	border-right: 1px solid #3b3b3b;
+	border-right: 0 solid #003b66;
 	white-space: nowrap;
 	position: fixed;
 	z-index: 9000;

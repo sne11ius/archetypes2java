@@ -90,6 +90,7 @@ class ArchetypesImporter {
 		} catch (final Exception e) {
 			LOG.error(e.getMessage(), e);
 		} finally {
+			LOG.debug("Import job finished.");
 			publisher.publishEvent(new ArchetypesDatabaseUpdatedEvent());
 		}
 	}
@@ -143,7 +144,7 @@ class ArchetypesImporter {
 			.redirectOutput(stdOut)
 			.destroyOnExit()
 			.directory(baseDir)
-			.timeout(5, TimeUnit.MINUTES)
+			.timeout(10, TimeUnit.MINUTES)
 			.execute()
 			.getExitValue();
 	}

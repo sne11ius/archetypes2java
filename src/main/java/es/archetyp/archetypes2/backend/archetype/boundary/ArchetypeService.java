@@ -70,4 +70,10 @@ public class ArchetypeService {
 						.collect(Collectors.joining());
 	}
 
+	public List<Archetype> findOlderVersions(final Archetype archetype) {
+		final List<Archetype> allVersions = archetypes.findByGroupIdAndArtifactId(archetype.getGroupId(), archetype.getArtifactId());
+		allVersions.remove(archetype);
+		return allVersions;
+	}
+
 }

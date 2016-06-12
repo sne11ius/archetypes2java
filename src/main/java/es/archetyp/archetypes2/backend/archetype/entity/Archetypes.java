@@ -19,4 +19,6 @@ public interface Archetypes extends Repository<Archetype, Long> {
 
 	List<Archetype> findAll();
 
+	List<Archetype> findByGroupIdAndArtifactId(String groupId, String artifactId);
+
 }

@@ -32,6 +32,9 @@ public class DetailView extends CustomComponent implements View {
 	private ArchetypeCommandPanel commandPanel;
 
 	@Autowired
+	private OtherArchetypeVersionsList olderVersionsList;
+
+	@Autowired
 	private ArchetypeExampleFileContentPanel fileContentPanel;
 
 	@Autowired
@@ -61,7 +64,7 @@ public class DetailView extends CustomComponent implements View {
         vlayout.addComponent(hlayout1);
         hlayout1.addComponent(detailsPanel);
         hlayout1.addComponent(commandPanel);
-        hlayout1.setExpandRatio(commandPanel, 1.0F);
+        hlayout1.addComponent(olderVersionsList);
         hlayout1.setSpacing(true);
         hlayout1.setWidth(100, Unit.PERCENTAGE);
         final HorizontalLayout hlayout2 = new HorizontalLayout();
